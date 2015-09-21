@@ -88,20 +88,20 @@
 .markdown-preview dl dd > :first-child, .markdown-preview[data-use-github-style] dl dd > :first-child { margin-top: 0px; }
 .markdown-preview dl dd > :last-child, .markdown-preview[data-use-github-style] dl dd > :last-child { margin-bottom: 0px; }
 .markdown-preview blockquote p, .markdown-preview[data-use-github-style] blockquote p { font-size: 16px; line-height: 1.5; }
-.markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { padding: 16px; overflow: auto; font-size: 84%; line-height: 1.45; border-radius: 3px; background-color: rgb(38, 50, 56); }
+.markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { padding: 16px; overflow: auto; font-size: 84%; line-height: 1.45; border-radius: 3px; background-color: rgb(35, 35, 35); }
 .markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { margin-bottom: 16px; word-break: normal; }
 .markdown-preview code, .markdown-preview[data-use-github-style] code, .markdown-preview tt, .markdown-preview[data-use-github-style] tt, .markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { font-family: Consolas, 'Liberation Mono', Courier, monospace; }
 .markdown-preview .emoji, .markdown-preview[data-use-github-style] .emoji { height: 20px; width: 20px; }
-.markdown-preview { font-size: 1.25em; color: rgb(41, 54, 61); background-color: rgb(240, 243, 245); }
-.markdown-preview h1, .markdown-preview h2 { color: inherit; border-color: rgb(182, 198, 206); }
+.markdown-preview { font-size: 1.25em; color: rgb(51, 51, 51); background-color: rgb(242, 242, 242); }
+.markdown-preview h1, .markdown-preview h2 { color: inherit; border-color: rgb(194, 194, 194); }
 .markdown-preview a { color: rgb(20, 146, 255); }
-.markdown-preview hr { background-color: rgb(200, 212, 218); }
-.markdown-preview blockquote { color: rgb(41, 54, 61); border-left-color: rgb(109, 140, 156); }
-.markdown-preview table th, .markdown-preview table td { border-color: rgb(182, 198, 206); }
-.markdown-preview table th { background-color: rgb(249, 250, 251); }
-.markdown-preview table tr { background-color: rgb(240, 243, 245); }
-.markdown-preview table tr:nth-child(2n) { background-color: rgb(231, 236, 239); }
-.markdown-preview code { color: rgb(62, 81, 91); border-color: rgb(182, 198, 206); background-color: rgb(228, 234, 236); background-clip: padding-box; }
+.markdown-preview hr { background-color: rgb(209, 209, 209); }
+.markdown-preview blockquote { color: rgb(51, 51, 51); border-left-color: rgb(133, 133, 133); }
+.markdown-preview table th, .markdown-preview table td { border-color: rgb(194, 194, 194); }
+.markdown-preview table th { background-color: rgb(250, 250, 250); }
+.markdown-preview table tr { background-color: rgb(242, 242, 242); }
+.markdown-preview table tr:nth-child(2n) { background-color: rgb(235, 235, 235); }
+.markdown-preview code { color: rgb(77, 77, 77); border-color: rgb(194, 194, 194); background-color: rgb(232, 232, 232); background-clip: padding-box; }
 .markdown-preview pre.editor-colors::shadow .line.cursor-line { background-color: transparent; }
 .bracket-matcher .region {
   border-bottom: 1px dotted lime;
@@ -112,343 +112,231 @@
   border-bottom: 1px dashed rgba(250, 128, 114, 0.5);
 }
 
-pre.editor-colors,
-.host {
-  background-color: #263238;
-  color: #cdd3de;
+.host,
+pre.editor-colors {
+  background-color: #232323;
+  color: #eeeeee;
 }
-pre.editor-colors .gutter,
-.host .gutter {
-  background-color: #263238;
-  color: #506e79;
+.host .gutter,
+pre.editor-colors .gutter {
+  background-color: #232323;
+  color: #cccccc;
 }
-pre.editor-colors .gutter .line-number.cursor-line,
-.host .gutter .line-number.cursor-line {
-  background-color: rgba(0, 0, 0, 0.19);
-  color: #cdd3de;
+.host .gutter .line-number.cursor-line,
+pre.editor-colors .gutter .line-number.cursor-line {
+  background-color: #303030;
+  color: #eeeeee;
 }
-pre.editor-colors .gutter .line-number.cursor-line-no-selection,
-.host .gutter .line-number.cursor-line-no-selection {
-  color: #cdd3de;
+.host .gutter .line-number.cursor-line-no-selection,
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  color: #eeeeee;
 }
-pre.editor-colors .wrap-guide,
-.host .wrap-guide {
-  color: #65737e;
+.host .wrap-guide,
+pre.editor-colors .wrap-guide {
+  color: #3b3a32;
 }
-pre.editor-colors .indent-guide,
-.host .indent-guide {
-  color: #65737e;
+.host .indent-guide,
+pre.editor-colors .indent-guide {
+  color: #3b3a32;
 }
-pre.editor-colors .invisible-character,
-.host .invisible-character {
-  color: #65737e;
+.host .invisible-character,
+pre.editor-colors .invisible-character {
+  color: #3b3a32;
 }
-pre.editor-colors .search-results .marker .region,
-.host .search-results .marker .region {
+.host .search-results .marker .region,
+pre.editor-colors .search-results .marker .region {
   background-color: transparent;
-  border: #65737e;
+  border: #3b3a32;
 }
-pre.editor-colors .search-results .marker.current-result .region,
-.host .search-results .marker.current-result .region {
-  border: #cdd3de;
+.host .search-results .marker.current-result .region,
+pre.editor-colors .search-results .marker.current-result .region {
+  border: #eeeeee;
 }
 pre.editor-colors.is-focused .cursor,
-.host(.is-focused) .cursor {
-  border-color: #c0c5ce;
+.host.is-focused .cursor {
+  border-color: #a7e150;
 }
 pre.editor-colors.is-focused .selection .region,
-.host(.is-focused) .selection .region {
-  background-color: rgba(128, 203, 196, 0.13);
+.host.is-focused .selection .region {
+  background-color: #555a5d;
 }
-pre.editor-colors.is-focused .line-number.cursor-line-no-selection,
-pre.editor-colors.is-focused .line.cursor-line,
-.host(.is-focused) .line-number.cursor-line-no-selection,
-.host(.is-focused) .line.cursor-line {
-  background-color: rgba(0, 0, 0, 0.19);
-}
-.variable.parameter.function {
-  color: #eeffff;
-}
-.comment,
-.punctuation.definition.comment {
-  color: #506e79;
-}
-.punctuation.definition.string,
-.punctuation.definition.variable,
-.punctuation.definition.string,
-.punctuation.definition.parameters,
-.punctuation.definition.string,
-.punctuation.definition.array {
-  color: #d9f5dd;
-}
-.none {
-  color: #d9f5dd;
-}
-.keyword.operator {
-  color: #d9f5dd;
-}
-.keyword {
-  color: #c792ea;
-}
-.variable {
-  color: #ff5370;
-}
-.variable .punctuation.definition.variable {
-  color: inherit;
-}
-.entity.name.function,
-.meta.require,
-.support.function.any-method,
-.meta.function-call,
-.support.function,
-.keyword.other.special-method,
-.meta.block-level {
-  color: #82b1ff;
-}
-.support.class,
-.entity.name.class,
-.entity.name.type.class {
-  color: #ffcb6b;
-}
-.meta.class {
-  color: #fff;
-}
-.keyword.other.special-method {
-  color: #82b1ff;
-}
-.storage {
-  color: #c792ea;
-}
-.support.function,
-.keyword.operator,
-.constant.other.color,
-.meta.tag,
-.punctuation.definition.tag,
-.punctuation.separator.inheritance.php,
-.punctuation.definition.tag.html,
-.punctuation.definition.tag.begin.html,
-.punctuation.definition.tag.end.html {
-  color: #80cbc4;
+.comment {
+  color: #777777;
 }
 .string,
-.constant.other.symbol,
-.entity.other.inherited-class {
-  color: #c3e88d;
+.constant.character.escape,
+.constant.character.escape.scss {
+  color: #d9debf;
+}
+.string.quoted.double.html {
+  color: #d0c39b;
 }
 .constant.numeric {
-  color: #f77669;
+  color: #C7AF3F;
 }
-.none {
-  color: #f77669;
+.constant.language {
+  color: #C7AF3F;
 }
-.none {
-  color: #f77669;
+.constant.character,
+.constant.other {
+  color: #c7760b;
 }
-.constant {
-  color: #f77669;
+.variable {
+  color: #b57b91;
 }
-.entity.name.tag {
-  color: #ff5370;
+.keyword {
+  color: #9FB3C2;
+}
+.storage {
+  color: #9FB3C2;
+}
+.storage.type {
+  color: #e1a170;
+}
+.entity.name.class {
+  text-decoration: underline;
+  color: #C7AF3F;
+}
+.entity.other.inherited-class {
+  text-decoration: underline;
+  color: #C7AF3F;
+}
+.entity.name.function {
+  color: #C7AF3F;
+}
+.variable.parameter {
+  color: #C7AF3F;
+}
+.meta.function-call {
+  color: #efd77d;
+}
+.entity.name.tag,
+.punctuation.definition.tag,
+.keyword.control.html.elements {
+  color: #C7AF3F;
 }
 .entity.other.attribute-name {
-  color: #c3e88d;
+  color: #8AB8A2;
 }
-.entity.other.attribute-name.id {
-  color: #fad430;
+.support.function {
+  color: #C7AF3F;
 }
-.meta.selector {
-  color: #c792ea;
+.support.constant {
+  color: #C7AF3F;
 }
-.none {
-  color: #f77669;
+.support.type,
+.support.class {
+  color: #C7AF3F;
 }
-.markup.heading .punctuation.definition.heading,
-.entity.name.section {
-  color: #78ccf0;
-}
-.keyword.other.unit {
-  color: #f77669;
-}
-.markup.bold,
-.punctuation.definition.bold {
-  font-weight: bold;
-  color: #ffcb6b;
-}
-.markup.italic,
-.punctuation.definition.italic {
-  font-style: italic;
-  color: #c792ea;
-}
-.markup.raw.inline,
-.markup.raw {
-  color: #f1e655;
-}
-.string.other.link,
-.punctuation.definition.string.end.markdown {
-  color: #ff5370;
-}
-[data-grammar*="gfm"]::shadow .markup.underline.link {
-  color: #ff869a;
-}
-[data-grammar*="gfm"]::shadow .markup.underline.link span.punctuation {
-  color: #ff5370;
-}
-[data-grammar*="gfm"]::shadow .markup.strike {
-  position: relative;
-  color: rgba(205, 211, 222, 0.5);
-}
-[data-grammar*="gfm"]::shadow .markup.strike::after {
-  content: "";
-  position: absolute;
-  top: calc(54%);
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: rgba(205, 211, 222, 0.2);
-}
-[data-grammar*="gfm"]::shadow .table .border {
-  color: rgba(205, 211, 222, 0.5);
-}
-[data-grammar*="gfm"]::shadow .markup.heading {
-  color: #82b1ff;
-}
-[data-grammar*="gfm"]::shadow .punctuation.definition.begin,
-[data-grammar*="gfm"]::shadow .punctuation.definition.end {
-  color: #82b1ff;
-}
-[data-grammar*="gfm"]::shadow .punctuation.definition.begin + span:not(.function.parameter) {
-  color: #9cc1ff;
-}
-.meta.link {
-  color: #f77669;
-}
-.markup.list {
-  color: #ff5370;
-}
-.markup.quote {
-  color: #f77669;
-}
-.meta.separator {
-  color: #d9f5dd;
-  background-color: #1e3445;
-}
-.markup.inserted {
-  color: #f1e655;
-}
-.markup.deleted {
-  color: #ff5370;
-}
-.markup.changed {
-  color: #c792ea;
-}
-.constant.other.color,
-.meta.property-value .support.constant.named-color.css {
-  color: #ffeb95;
-}
-.string.regexp {
-  color: #80cbc4;
-}
-.constant.character.escape {
-  color: #80cbc4;
-}
-.punctuation.section.embedded,
-.variable.interpolation {
-  color: #d3423e;
-}
-.invalid.illegal {
-  color: #ffffff;
-  background-color: #ec5f67;
-}
-.invalid.broken {
-  color: #020e14;
-  background-color: #f77669;
+.invalid {
+  color: #F8F8F0;
+  background-color: #00A8C6;
 }
 .invalid.deprecated {
-  color: #ffffff;
-  background-color: #d3423e;
+  color: #F8F8F0;
+  background-color: #8FBE00;
 }
-.invalid.unimplemented {
-  color: #ffffff;
-  background-color: #8bd649;
+.meta.structure.dictionary.json .string.quoted.double.json {
+  color: #CFCFC2;
 }
-.sublimelinter.annotations {
-  color: #7b5157;
-  background-color: #fffff7;
+.meta.diff,
+.meta.diff.header {
+  color: #75715E;
 }
-.sublimelinter.outline.illegal {
-  color: #ffffff;
-  background-color: #ff9599;
+.markup.deleted {
+  color: #00A8C6;
 }
-.sublimelinter.underline.illegal {
-  background-color: #ff4941;
+.markup.inserted {
+  color: #A6E22E;
 }
-.sublimelinter.outline.warning {
-  color: #ffffff;
-  background-color: #ffcf1b;
+.markup.changed {
+  color: #E6DB74;
 }
-.sublimelinter.underline.warning {
-  background-color: #ff4941;
+.constant.numeric.line-number.find-in-files:not(.match) {
+  color: rgba(143, 190, 0, 0.63);
 }
-.sublimelinter.outline.violation {
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.2);
+.entity.name.filename.find-in-files {
+  color: #E6DB74;
 }
-.sublimelinter.underline.violation {
-  background-color: #ff4941;
+.support.type.property-name.css,
+.support.type.property-name.scss,
+.meta.property-list.css .meta.property-name.css,
+.meta.property-list.scss .meta.property-name.scss,
+.entity.name.tag.custom.scss {
+  color: #C5AF75;
 }
-.sublimelinter.mark.error {
-  color: #ff572d;
+.meta.property-group .support.constant.property-value.css,
+.meta.property-list.css .meta.property-value.css,
+.meta.property-value .support.constant.property-value.css,
+.meta.property-group .support.constant.property-value.scss,
+.meta.property-value .support.constant.property-value.scss,
+.constant.numeric.css,
+.constant.numeric.scss,
+.variable.parameter.misc.css,
+.parameter.less.data-uri .comment .markup.raw,
+.source.less .meta.property-value.css {
+  color: #a4b3ca;
 }
-.sublimelinter.mark.warning {
-  color: #ffcf1b;
+.support.constant.named-color,
+.meta.property-value .constant,
+.keyword.other.unit,
+.constant.other.color.rgb-value,
+.constant.other.rgb-value.css {
+  color: #a4b3ca;
 }
-.sublimelinter.gutter-mark {
-  color: #ffffff;
+.meta.constructor.argument.css,
+.meta.constructor.argument.scss {
+  color: #8F9D6A;
 }
-.markup.deleted.git_gutter {
-  color: #ec5f67;
+.source.scss .entity.other.attribute-name.placeholder.scss {
+  color: #8F9D6A;
 }
-.markup.changed.git_gutter {
-  color: #ffcf1b;
+.meta.preprocessor.at-rule .keyword.control.at-rule,
+.meta.at-rule.import,
+.keyword.control.at-rule {
+  color: #8693A5;
 }
-.markup.inserted.git_gutter {
-  color: #c3e88d;
+.keyword.other.important {
+  color: #ae5555;
 }
-.markup.ignored.git_gutter {
-  color: #546e7a;
+.punctuation.terminator.rule,
+.punctuation.separator.key-value,
+.support.constant.mathematical-symbols.scss,
+.support.constant.mathematical-symbols.css,
+.punctuation.section.function {
+  color: #dedede;
 }
-.comment.line.double-slash .punctuation.definition.comment,
-.meta.structure.array .comment.block.json .punctuation.definition.comment {
-  color: #506e79;
+.source.scss .meta.set.variable .variable,
+.variable.scss {
+  color: #c07a7a;
 }
-.support.type.property-name {
-  color: #80cbc4;
+/* .source.scss .meta.property-list.scss .entity.name.tag.scss {
+
+} */
+.punctuation.section.embedded.begin.php,
+.punctuation.section.embedded.end.php {
+  color: #CF6A4C;
 }
-.meta.property-list .meta.property-name {
-  color: #80cbc4;
+.source.asp.embedded.html {
+  color: #CF6A4C;
 }
-.source.css .keyword.other.unit,
-.source.less .keyword.other.unit,
-.source.scss .keyword.other.unit,
-.source.sass .keyword.other.unit {
-  color: #ffeb95;
+.brackethighlighter.tag {
+  color: #CF6A4C;
 }
-.entity.other.less.mixin {
-  color: #7986cb;
+.brackethighlighter.curly {
+  color: #CF6A4C;
 }
-.constant.other.color.rgb-value .punctuation.definition.constant {
-  color: #f77669;
+.brackethighlighter.round {
+  color: #CF6A4C;
 }
-.meta.attribute-selector .string.unquoted.attribute-value {
-  color: #c3e88d;
+.brackethighlighter.square {
+  color: #CF6A4C;
 }
-.meta.attribute-selector .entity.other.attribute-name.attribute {
-  color: #f77669;
+.brackethighlighter.angle {
+  color: #CF6A4C;
 }
-.bracket-matcher .region {
-  border-bottom: 1px solid #c0c5ce;
-  box-sizing: border-box;
-  background-color: #364850;
+.brackethighlighter.quote {
+  color: #CF6A4C;
 }
 </style>
   </head>
@@ -734,7 +622,7 @@ pre.editor-colors.is-focused .line.cursor-line,
 <h2 id="gag-damage">Gag Damage</h2>
 <h2 id="-hpbonus-"><code style="font-family: Menlo;">hpBonus</code></h2>
 <p><code style="font-family: Menlo;">hpBonus</code> applied in any case where multiple gags of the same track were used in the same round, on the same target. It was calculated as follows.</p>
-<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>hpBonus</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span>ceil</span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>totalDmgs</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span class="constant numeric float python"><span>0.20</span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div></pre>
+<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>hpBonus</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="meta function-call generic python"><span>ceil</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>totalDmgs</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span class="constant numeric float python"><span>0.20</span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div></pre>
 <p>(<a href="https://docs.python.org/2/library/math.html#math.ceil">See definition of <code style="font-family: Menlo;">ceil</code> here</a>)</p>
 <p>Where <code style="font-family: Menlo;">totalDmgs</code> represented the total amount of damage done by the particular track, on the particular target.</p>
 <p><code style="font-family: Menlo;">hpBonus</code> did not apply to Lure or Trap gags.</p>
@@ -745,7 +633,7 @@ pre.editor-colors.is-focused .line.cursor-line,
 <p>However <code style="font-family: Menlo;">kbBonus</code> was affected by a long-standing bug, which was essentially caused by the fact that <code style="font-family: Menlo;">kbBonus</code> was assigned based on cog position instead of cog ID. This meant that <code style="font-family: Menlo;">kbBonus</code> was dependent on consistent ordering. For example, consider the following situation:</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>D&nbsp;C&nbsp;B&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>1</span></span></span></div></pre><p>Here, we have four <em>lured</em> cogs (D, C, B, and A) against 1 toon. This cog ordering was represented by a list named <code style="font-family: Menlo;">activeSuits</code> (that is, <code style="font-family: Menlo;">[A, B, C, D]</code>). There were, however, other representations including <code style="font-family: Menlo;">suits</code>, <code style="font-family: Menlo;">joiningSuits</code> and <code style="font-family: Menlo;">pendingSuits</code> -- none of which were guaranteed to be ordered in the same way.</p>
 <p>Now, consider that Toon 1 uses a Birthday Cake on cog C (index 2).</p>
-<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>:</span><span class="meta function-call python"><span>BattleCalculatorAI</span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>debug</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>:&nbsp;</span><span>activeSuits</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta structure list python"><span class="punctuation definition list begin python"><span>[</span></span><span class="meta structure list item python"><span>A</span></span><span class="punctuation separator list python"><span>,</span></span><span>&nbsp;</span><span class="meta structure list item python"><span>B</span></span><span class="punctuation separator list python"><span>,</span></span><span>&nbsp;</span><span class="meta structure list item python"><span>C</span></span><span class="punctuation separator list python"><span>,</span></span><span>&nbsp;</span><span class="meta structure list item python"><span>D</span></span><span class="punctuation definition list end python"><span>]</span></span></span></span></div><div class="line"><span class="source python"><span>:</span><span class="meta function-call python"><span>BattleCalculatorAI</span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>debug</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>:&nbsp;</span><span>suits</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta structure list python"><span class="punctuation definition list begin python"><span>[</span></span><span class="meta structure list item python"><span>A</span></span><span class="punctuation separator list python"><span>,</span></span><span>&nbsp;</span><span class="meta structure list item python"><span>D</span></span><span class="punctuation separator list python"><span>,</span></span><span>&nbsp;</span><span class="meta structure list item python"><span>B</span></span><span class="punctuation separator list python"><span>,</span></span><span>&nbsp;</span><span class="meta structure list item python"><span>C</span></span><span class="punctuation definition list end python"><span>]</span></span></span></span></div></pre>
+<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>:</span><span class="meta function-call python"><span class="meta function-call generic python"><span>BattleCalculatorAI</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>debug</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>:&nbsp;</span><span>activeSuits</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta structure list python"><span class="punctuation definition list begin python"><span>[</span></span><span class="meta structure list item python"><span class="constant other allcaps python"><span>A</span></span></span><span class="punctuation separator list python"><span>,</span></span><span>&nbsp;</span><span class="meta structure list item python"><span class="constant other allcaps python"><span>B</span></span></span><span class="punctuation separator list python"><span>,</span></span><span>&nbsp;</span><span class="meta structure list item python"><span class="constant other allcaps python"><span>C</span></span></span><span class="punctuation separator list python"><span>,</span></span><span>&nbsp;</span><span class="meta structure list item python"><span class="constant other allcaps python"><span>D</span></span></span><span class="punctuation definition list end python"><span>]</span></span></span></span></div><div class="line"><span class="source python"><span>:</span><span class="meta function-call python"><span class="meta function-call generic python"><span>BattleCalculatorAI</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>debug</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>:&nbsp;</span><span>suits</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta structure list python"><span class="punctuation definition list begin python"><span>[</span></span><span class="meta structure list item python"><span class="constant other allcaps python"><span>A</span></span></span><span class="punctuation separator list python"><span>,</span></span><span>&nbsp;</span><span class="meta structure list item python"><span class="constant other allcaps python"><span>D</span></span></span><span class="punctuation separator list python"><span>,</span></span><span>&nbsp;</span><span class="meta structure list item python"><span class="constant other allcaps python"><span>B</span></span></span><span class="punctuation separator list python"><span>,</span></span><span>&nbsp;</span><span class="meta structure list item python"><span class="constant other allcaps python"><span>C</span></span></span><span class="punctuation definition list end python"><span>]</span></span></span></span></div></pre>
 <p>In the above, <code style="font-family: Menlo;">activeSuits</code> is ordered as expected and would result in cog C getting the bonus. However, the game actually used the ordering of <code style="font-family: Menlo;">suits</code>!</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>:BattleCalculatorAI(debug):&nbsp;track&nbsp;=&nbsp;4</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>:BattleCalculatorAI(debug):&nbsp;tgtPos&nbsp;=&nbsp;suits.index(C)&nbsp;=&nbsp;3</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>:BattleCalculatorAI(debug):&nbsp;kbBonuses[tgtPos][track]&nbsp;=&nbsp;[0,&nbsp;100.0]</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>:BattleCalculatorAI(debug):&nbsp;Applying&nbsp;kbBonus&nbsp;(100.0&nbsp;*&nbsp;0.5&nbsp;dmg)&nbsp;to&nbsp;activeSuit&nbsp;at&nbsp;tgtPos&nbsp;3</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>:BattleCalculatorAI(debug):&nbsp;activeSuit&nbsp;C&nbsp;takes&nbsp;100.0&nbsp;damage</span></span></span></div></pre><p>As you can see, it used the index of cog C from <code style="font-family: Menlo;">suits</code> on the cog at the same index in <code style="font-family: Menlo;">activeSuits</code>, which was cog D.</p>
 <h2 id="-carryover-"><code style="font-family: Menlo;">&quot;Carryover&quot;</code></h2>
@@ -903,7 +791,7 @@ pre.editor-colors.is-focused .line.cursor-line,
 <p><code style="font-family: Menlo;">QuestItem</code> served two purposes:</p>
 <ul>
 <li><p>If there was an active Fishing quest, the following calculation was done to determine if the quest item would be found:</p>
-<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>&nbsp;</span><span>questItemFound</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant language python"><span>False</span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span>minChance</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span>questClass</span><span>.</span><span>getPercentChance</span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>&nbsp;</span><span class="comment line number-sign python"><span class="punctuation definition comment python"><span>#</span></span><span>&nbsp;Quest&nbsp;rarity&nbsp;%</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span>chance</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span>random</span><span>.</span><span>randint</span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>minChance</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>40</span></span><span>,&nbsp;</span><span class="constant numeric integer decimal python"><span>100</span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span class="keyword control conditional python"><span>if</span></span><span>&nbsp;</span><span>chance</span><span>&nbsp;</span><span class="keyword operator comparison python"><span>&lt;=</span></span><span>&nbsp;</span><span>minChance</span><span>:</span></span></div><div class="line"><span class="source python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>questItemFound</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant language python"><span>True</span></span></span></div></pre>
+<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>&nbsp;</span><span>questItemFound</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant language python"><span>False</span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span>minChance</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>questClass.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>getPercentChance</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>&nbsp;</span><span class="comment line number-sign python"><span class="punctuation definition comment python"><span>#</span></span><span>&nbsp;Quest&nbsp;rarity&nbsp;%</span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span>chance</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>random.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>randint</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>minChance</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>40</span></span><span>,&nbsp;</span><span class="constant numeric integer decimal python"><span>100</span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span class="keyword control flow python"><span>if</span></span><span>&nbsp;</span><span>chance</span><span>&nbsp;</span><span class="keyword operator comparison python"><span>&lt;=</span></span><span>&nbsp;</span><span>minChance</span><span>:</span></span></div><div class="line"><span class="source python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>questItemFound</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant language python"><span>True</span></span></span></div></pre>
 </li>
 <li>If there was not an active Fishing quest or the quest item was not found,  <code style="font-family: Menlo;">QuestItem</code> used the same process as <code style="font-family: Menlo;">FishItem</code> (see next section).</li>
 </ul>
@@ -912,7 +800,7 @@ pre.editor-colors.is-focused .line.cursor-line,
 <ul>
 <li><code style="font-family: Menlo;">rarity</code>:</li>
 </ul>
-<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>rarity</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>int</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span class="meta function-call python"><span>ceil</span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span class="constant numeric integer decimal python"><span>10</span></span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span>(</span><span class="constant numeric integer decimal python"><span>1</span></span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>pow</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>diceRoll</span><span>,&nbsp;</span><span>RodRarityFactor</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>)</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span class="keyword control conditional python"><span>if</span></span><span>&nbsp;</span><span>rarity</span><span>&nbsp;</span><span class="keyword operator comparison python"><span>&lt;=</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>0</span></span><span>:</span></span></div><div class="line"><span class="source python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>rarity</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>1</span></span></span></div></pre>
+<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>rarity</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>int</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span class="meta function-call python"><span class="meta function-call generic python"><span>ceil</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span class="constant numeric integer decimal python"><span>10</span></span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span>(</span><span class="constant numeric integer decimal python"><span>1</span></span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>pow</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>diceRoll</span><span>,&nbsp;</span><span>RodRarityFactor</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>)</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span class="keyword control flow python"><span>if</span></span><span>&nbsp;</span><span>rarity</span><span>&nbsp;</span><span class="keyword operator comparison python"><span>&lt;=</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>0</span></span><span>:</span></span></div><div class="line"><span class="source python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>rarity</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>1</span></span></span></div></pre>
 <p>Where <code style="font-family: Menlo;">diceRoll</code> was a pseudorandom real number such that 0.0 &lt;= <code style="font-family: Menlo;">diceRoll</code> &lt; 1.0 and <code style="font-family: Menlo;">RodRarityFactor</code> was given by the following table.</p>
 <table>
 <thead>
@@ -1142,7 +1030,7 @@ pre.editor-colors.is-focused .line.cursor-line,
 <p>Every cycle, each prosecuting cog had a 50/50 chance to either (1) attack a toon or (2) hit the scale. If option 1 was selected, a toon was chosen at random from a list of all toons in the battle. </p>
 <h2 id="how-was-the-scale-related-to-the-jury-a-name-cj-4-a-">How was the scale related to the jury? <a name="cj-4"></a></h2>
 <p>When determining how the amount of Toon jurors affected the scale, the following formula was used.</p>
-<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>jurorsOver</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="variable language python"><span>self</span></span><span>.</span><span>numToonJurorsSeated</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span>ToontownGlobals</span><span>.</span><span>LawbotBossJurorsForBalancedScale</span></span></div><div class="line"><span class="source python"><span>dmgAdjust</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>jurorsOver</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span>ToontownGlobals</span><span>.</span><span>LawbotBossDamagePerJuror</span></span></div></pre>
+<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>jurorsOver</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="variable language python"><span>self</span></span><span>.numToonJurorsSeated</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span>ToontownGlobals.</span><span>L</span><span>awbotBossJurorsForBalancedScale</span></span></div><div class="line"><span class="source python"><span>dmgAdjust</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>jurorsOver</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span>ToontownGlobals.</span><span>L</span><span>awbotBossDamagePerJuror</span></span></div></pre>
 <p><code style="font-family: Menlo;">jurorsOver</code> was determined by taking the amount of Toon jurors seated and then subtracting it by the amount needed for a balanced scale (8 for non-modified servers). That amount was then multiplied by the damage amount each Toon juror done, which was set to 68 per toon juror. The result was then referred to as <code style="font-family: Menlo;">dmgAdjust</code>. </p>
 <p>The initial damage of the scale was calculated at 1350. <code style="font-family: Menlo;">dmgAdjust</code> was then added to the initial damage of the scale. Given how the formula is calculated, we can establish the following ratios for the initial amount of evidence in the prosecution and defense pans, based on the amount of Toon jurors seated.</p>
 <table>
