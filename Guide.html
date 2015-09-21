@@ -92,16 +92,16 @@
 .markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { margin-bottom: 16px; word-break: normal; }
 .markdown-preview code, .markdown-preview[data-use-github-style] code, .markdown-preview tt, .markdown-preview[data-use-github-style] tt, .markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { font-family: Consolas, 'Liberation Mono', Courier, monospace; }
 .markdown-preview .emoji, .markdown-preview[data-use-github-style] .emoji { height: 20px; width: 20px; }
-.markdown-preview { font-size: 1.25em; color: rgb(207, 207, 207); background-color: rgb(43, 43, 43); }
-.markdown-preview h1, .markdown-preview h2 { color: inherit; border-color: rgb(21, 21, 21); }
-.markdown-preview a { color: rgb(100, 148, 237); }
-.markdown-preview hr { background-color: rgb(66, 66, 66); }
-.markdown-preview blockquote { color: rgb(168, 168, 168); border-left-color: rgba(168, 168, 168, 0.6); }
-.markdown-preview table th, .markdown-preview table td { border-color: rgb(21, 21, 21); }
-.markdown-preview table th { background-color: rgb(50, 50, 50); }
-.markdown-preview table tr { background-color: rgb(43, 43, 43); }
-.markdown-preview table tr:nth-child(2n) { background-color: rgb(35, 35, 35); }
-.markdown-preview code { color: rgb(245, 245, 245); border-color: rgb(21, 21, 21); background-color: rgb(61, 61, 61); background-clip: padding-box; }
+.markdown-preview { font-size: 1.25em; color: rgb(51, 51, 51); background-color: rgb(242, 242, 242); }
+.markdown-preview h1, .markdown-preview h2 { color: inherit; border-color: rgb(194, 194, 194); }
+.markdown-preview a { color: rgb(20, 146, 255); }
+.markdown-preview hr { background-color: rgb(209, 209, 209); }
+.markdown-preview blockquote { color: rgb(51, 51, 51); border-left-color: rgb(133, 133, 133); }
+.markdown-preview table th, .markdown-preview table td { border-color: rgb(194, 194, 194); }
+.markdown-preview table th { background-color: rgb(250, 250, 250); }
+.markdown-preview table tr { background-color: rgb(242, 242, 242); }
+.markdown-preview table tr:nth-child(2n) { background-color: rgb(235, 235, 235); }
+.markdown-preview code { color: rgb(77, 77, 77); border-color: rgb(194, 194, 194); background-color: rgb(232, 232, 232); background-clip: padding-box; }
 .markdown-preview pre.editor-colors::shadow .line.cursor-line { background-color: transparent; }
 .bracket-matcher .region {
   border-bottom: 1px dotted lime;
@@ -399,6 +399,7 @@ pre.editor-colors.is-focused .selection .region,
 <li><a href="#ceo">C.E.O.</a><ul>
 <li><a href="#ceo-1">How did the C.E.O. choose which attack to use?</a></li>
 <li><a href="#ceo-2">How did the C.E.O. choose which toon to attack?</a></li>
+<li><a href="#ceo-3">How did the C.E.O. decide to continue moving or not?</a></li>
 </ul>
 </li>
 <li><a href="#fishing">Fishing</a><ul>
@@ -640,6 +641,7 @@ pre.editor-colors.is-focused .selection .region,
 <p>&quot;Carryover&quot; damage only applied to version 2.0 cogs. Every time an instance of damage was done, the game checked to see if the cog was dead. Once the first layer was destroyed, any further instances of damage done would bleed through to the skelecog layer. For all calculation purposes, the game calculated the instances of damages in the order of gag damage (Red), <code style="font-family: Menlo;">hpBonus</code> (Yellow) and then <code style="font-family: Menlo;">kbBonus</code> (Orange). </p>
 <p>Suppose we have 3 toons use maxed Storm Clouds against a lured Level 12 The Big Cheese V2.0.</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Toon&nbsp;1&nbsp;=&nbsp;80&nbsp;damage&nbsp;(Red).&nbsp;Is&nbsp;the&nbsp;cog&nbsp;destroyed?&nbsp;No,&nbsp;HP&nbsp;=&nbsp;120.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Toon&nbsp;2&nbsp;=&nbsp;80&nbsp;damage&nbsp;(Red).&nbsp;Is&nbsp;the&nbsp;cog&nbsp;destroyed?&nbsp;No,&nbsp;HP&nbsp;=&nbsp;40.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Toon&nbsp;3&nbsp;=&nbsp;80&nbsp;damage&nbsp;(Red).&nbsp;Is&nbsp;the&nbsp;cog&nbsp;destroyed?&nbsp;Yes,&nbsp;but&nbsp;it&nbsp;is&nbsp;a&nbsp;version&nbsp;2.0,&nbsp;so&nbsp;revive&nbsp;it&nbsp;with&nbsp;max&nbsp;HP.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>hpBonus&nbsp;is&nbsp;calculated&nbsp;(240&nbsp;*&nbsp;0.20&nbsp;=&nbsp;48).&nbsp;Is&nbsp;the&nbsp;skelecog&nbsp;destroyed?&nbsp;No,&nbsp;HP&nbsp;=&nbsp;152.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>kbBonus&nbsp;is&nbsp;calculated&nbsp;(240&nbsp;*&nbsp;0.5&nbsp;=&nbsp;120).&nbsp;Is&nbsp;the&nbsp;skelecog&nbsp;destroyed?&nbsp;No,&nbsp;HP&nbsp;=&nbsp;32.</span></span></span></div></pre><h2 id="cog-attack-accuracy-a-name-cog-atk-acc-a-">Cog Attack Accuracy <a name="cog-atk-acc"></a></h2>
+<p>[<a href="#contents">back to top</a>]</p>
 <p>The following three sections outline the calculations that were performed for each active cog in battle.</p>
 <h3 id="which-attack-will-be-used-a-name-cog-atk-acc-1-a-">Which attack will be used? <a name="cog-atk-acc-1"></a></h3>
 <p>There were two variables used in the calculation of <code style="font-family: Menlo;">atk</code> (the attack to be used): <code style="font-family: Menlo;">theSuit</code> and <code style="font-family: Menlo;">attacks</code>. The former represented the cog being used in the calculation, while the latter was a tuple containing the information for each of <code style="font-family: Menlo;">theSuit</code>&#39;s possible attacks. Also note that a &quot;relative&quot; cog level was used for frequency calculation purposes. This was calculated as follows.</p>
@@ -785,26 +787,14 @@ pre.editor-colors.is-focused .selection .region,
 <h2 id="fishing-a-name-fishing-main-a-">Fishing <a name="fishing-main"></a></h2>
 <p>[<a href="#contents">back to top</a>]</p>
 <h3 id="-itemtype-"><code style="font-family: Menlo;">itemType</code></h3>
-<p><code style="font-family: Menlo;">itemType</code> was the primamry factor in determining the result of a successful cast. The possible types were <code style="font-family: Menlo;">JellybeanItem</code>, <code style="font-family: Menlo;">FishItem</code>, <code style="font-family: Menlo;">BootItem</code> and <code style="font-family: Menlo;">QuestItem</code>. </p>
-<p>Each item was assigned a probability (its <code style="font-family: Menlo;">cutoff</code>) of being selected via a dictionary named <code style="font-family: Menlo;">SortedProbabilityCutoffs</code>:</p>
-<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>ProbabilityDict</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta structure dictionary python"><span class="punctuation definition dictionary begin python"><span>{</span></span><span class="meta structure dictionary key python"><span class="constant numeric integer decimal python"><span>94</span></span></span><span class="punctuation separator valuepair dictionary python"><span>:</span></span><span>&nbsp;</span><span class="meta structure dictionary value python"><span>FishItem</span></span><span class="punctuation separator dictionary python"><span>,</span></span><span>&nbsp;</span><span class="meta structure dictionary key python"><span class="constant numeric integer decimal python"><span>92</span></span></span><span class="punctuation separator valuepair dictionary python"><span>:</span></span><span>&nbsp;</span><span class="meta structure dictionary value python"><span>QuestItem</span></span><span class="punctuation separator dictionary python"><span>,</span></span><span>&nbsp;</span><span class="meta structure dictionary key python"><span class="constant numeric integer decimal python"><span>95</span></span></span><span class="punctuation separator valuepair dictionary python"><span>:</span></span><span>&nbsp;</span><span class="meta structure dictionary value python"><span>JellybeanItem</span></span><span class="punctuation separator dictionary python"><span>,</span></span><span>&nbsp;</span><span class="meta structure dictionary key python"><span class="constant numeric integer decimal python"><span>100</span></span></span><span class="punctuation separator valuepair dictionary python"><span>:</span></span><span>&nbsp;</span><span class="meta structure dictionary value python"><span>BootItem</span></span><span class="punctuation definition dictionary end python"><span>}</span></span></span></span></div><div class="line"><span class="source python"><span>SortedProbabilityCutoffs</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>ProbabilityDict.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>keys</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>SortedProbabilityCutoffs.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>sort</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div></pre>
-<p>Now, <code style="font-family: Menlo;">itemType</code> was assigned according to the following algorithm:</p>
-<ol>
-<li>A pseudorandom real number, <code style="font-family: Menlo;">rand</code>, was generated such that 0.0 &lt;= <code style="font-family: Menlo;">rand</code> &lt; 100.0.</li>
-<li>Each <code style="font-family: Menlo;">cutoff</code> in <code style="font-family: Menlo;">SortedProbabilityCutoffs</code> was then compared to <code style="font-family: Menlo;">rand</code>.<ul>
-<li>if <code style="font-family: Menlo;">rand</code> was less than or equal to <code style="font-family: Menlo;">cutoff</code>, <code style="font-family: Menlo;">itemType</code> was assigned <code style="font-family: Menlo;">ProbabilityDict[cutoff]</code>.</li>
-<li>if <code style="font-family: Menlo;">rand</code> was greater than <code style="font-family: Menlo;">cutoff</code>, the loop continued.</li>
-</ul>
-</li>
-</ol>
-<p>In other words, the odds of selecting each item type were 92% (<code style="font-family: Menlo;">QuestItem</code>), 5% (<code style="font-family: Menlo;">BootItem</code>), 2% (<code style="font-family: Menlo;">FishItem</code>) and 1% (<code style="font-family: Menlo;">JellybeanItem</code>).</p>
+<p><code style="font-family: Menlo;">itemType</code> was the primary factor in determining the result of a successful cast. The possible types were <code style="font-family: Menlo;">JellybeanItem</code> (1%), <code style="font-family: Menlo;">FishItem</code> (2%), <code style="font-family: Menlo;">BootItem</code> (5%) and <code style="font-family: Menlo;">QuestItem</code> (92%).</p>
 <h3 id="-questitem-"><code style="font-family: Menlo;">QuestItem</code></h3>
 <p><code style="font-family: Menlo;">QuestItem</code> served two purposes:</p>
 <ul>
 <li><p>If there was an active Fishing quest, the following calculation was done to determine if the quest item would be found:</p>
-<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>&nbsp;</span><span>questItemFound</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant language python"><span>False</span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span>minChance</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>questClass.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>getPercentChance</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span>chance</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>random.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>randint</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>minChance</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>40</span></span><span>,&nbsp;</span><span class="constant numeric integer decimal python"><span>100</span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span class="keyword control flow python"><span>if</span></span><span>&nbsp;</span><span>chance</span><span>&nbsp;</span><span class="keyword operator comparison python"><span>&lt;=</span></span><span>&nbsp;</span><span>minChance</span><span>:</span></span></div><div class="line"><span class="source python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>questItemFound</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant language python"><span>True</span></span></span></div></pre>
+<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>&nbsp;</span><span>questItemFound</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant language python"><span>False</span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span>minChance</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>questClass.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>getPercentChance</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>&nbsp;</span><span class="comment line number-sign python"><span class="punctuation definition comment python"><span>#</span></span><span>&nbsp;Quest&nbsp;rarity&nbsp;%</span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span>chance</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>random.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>randint</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>minChance</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>40</span></span><span>,&nbsp;</span><span class="constant numeric integer decimal python"><span>100</span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span class="keyword control flow python"><span>if</span></span><span>&nbsp;</span><span>chance</span><span>&nbsp;</span><span class="keyword operator comparison python"><span>&lt;=</span></span><span>&nbsp;</span><span>minChance</span><span>:</span></span></div><div class="line"><span class="source python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>questItemFound</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant language python"><span>True</span></span></span></div></pre>
 </li>
-<li>If there was not an active Fishing quest or <code style="font-family: Menlo;">questItemFound == False</code>,  <code style="font-family: Menlo;">QuestItem</code> used the same process as <code style="font-family: Menlo;">FishItem</code> (see next section).</li>
+<li>If there was not an active Fishing quest or the quest item was not found,  <code style="font-family: Menlo;">QuestItem</code> used the same process as <code style="font-family: Menlo;">FishItem</code> (see next section).</li>
 </ul>
 <h3 id="-fishitem-"><code style="font-family: Menlo;">FishItem</code></h3>
 <p>Every fish had three components: genus, species and weight. Genus and species were randomly selected from a list, <code style="font-family: Menlo;">fishList</code>, which was formed as follows.</p>
@@ -852,7 +842,39 @@ pre.editor-colors.is-focused .selection .region,
 </li>
 </ul>
 <h3 id="-jellybeanitem-"><code style="font-family: Menlo;">JellybeanItem</code></h3>
+<p>In this case, Jellybeans were awarded according to the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Rod</th>
+<th style="text-align:center">Jellybeans</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Twig</td>
+<td style="text-align:center">10</td>
+</tr>
+<tr>
+<td style="text-align:center">Bamboo</td>
+<td style="text-align:center">20</td>
+</tr>
+<tr>
+<td style="text-align:center">Hardwood</td>
+<td style="text-align:center">30</td>
+</tr>
+<tr>
+<td style="text-align:center">Steel</td>
+<td style="text-align:center">75</td>
+</tr>
+<tr>
+<td style="text-align:center">Gold</td>
+<td style="text-align:center">150</td>
+</tr>
+</tbody>
+</table>
 <h3 id="-bootitem-"><code style="font-family: Menlo;">BootItem</code></h3>
+<p>In this case, a boot was caught.</p>
 <h1 id="toon-up-a-name-toon-up-a-">Toon-up <a name="toon-up"></a></h1>
 <p>[<a href="#contents">back to top</a>]</p>
 <h2 id="did-using-toon-up-have-any-impact-on-other-gag-s-accuracy-a-name-toon-up-1-a-">Did using Toon-up have any impact on other gag&#39;s accuracy? <a name="toon-up-1"></a></h2>
@@ -1095,6 +1117,8 @@ pre.editor-colors.is-focused .selection .region,
 <p>[<a href="#contents">back to top</a>]</p>
 <h2 id="how-did-the-c-e-o-choose-which-attack-to-use-a-name-ceo-1-a-">How did the C.E.O. choose which attack to use? <a name="ceo-1"></a></h2>
 <h2 id="how-did-the-c-e-o-choose-which-toon-to-attack-a-name-ceo-2-a-">How did the C.E.O. choose which toon to attack? <a name="ceo-2"></a></h2>
+<h2 id="how-did-the-c-e-o-decide-to-continue-moving-or-not-a-name-ceo-3-a-">How did the C.E.O. decide to continue moving or not? <a name="ceo-3"></a></h2>
+<p>If the C.E.O. was moving towards a toon on a table, and that particular toon hopped off the table, <code style="font-family: Menlo;">random.random()</code> generated a number between 0.0 and 1.0. If <code style="font-family: Menlo;">random.random()</code> was less than 0.5, the C.E.O. would stop moving towards that table and use his directed golf attack. Otherwise, the C.E.O. would run over that table and stop on top of it.</p>
 <h1 id="fishing-a-name-fishing-a-">Fishing <a name="fishing"></a></h1>
 <p>[<a href="#contents">back to top</a>]</p>
 <h2 id="was-using-a-twig-rod-more-beneficial-to-catch-light-weight-ultra-rares-than-a-gold-rod-a-name-fishing-1-a-">Was using a Twig Rod more beneficial to catch light-weight Ultra Rares than a Gold Rod? <a name="fishing-1"></a></h2>
@@ -1157,6 +1181,9 @@ pre.editor-colors.is-focused .selection .region,
 <h2 id="did-doodle-tricks-count-as-a-stun-in-battle-a-name-misc-4-a-">Did doodle tricks count as a stun in battle? <a name="misc-4"></a></h2>
 <p>Yes, Doodle tricks counted as a stun in battles, provided that the trick was successful. Tricks counted as their own individual track, meaning they would satisfy the conditions listed in the <a href="#toon-atk-acc-6">bonus section</a>.</p>
 <h2 id="did-fires-count-as-a-stun-a-name-misc-5-a-">Did Fires count as a stun?<a name="misc-5"></a></h2>
+<p>Yes, Fires counted as a stun, so long as the gag(s) used aftewards were multi-target gags. Fires would not count as a stun for single target gags.</p>
+<h2 id="battle-simulations">Battle Simulations</h2>
+<p>-<a href="http://pastebin.com/yqU1WxdX">1 Fire &amp; Hypno Goggles</a></p>
 <h1 id="credits-a-name-credits-a-">Credits <a name="credits"></a></h1>
 <p>[<a href="#contents">back to top</a>]</p>
 <ul>
@@ -3475,3 +3502,4 @@ pre.editor-colors.is-focused .selection .region,
             </tr>
             </table></body>
 </html>
+
