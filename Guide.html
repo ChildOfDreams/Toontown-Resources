@@ -88,20 +88,20 @@
 .markdown-preview dl dd > :first-child, .markdown-preview[data-use-github-style] dl dd > :first-child { margin-top: 0px; }
 .markdown-preview dl dd > :last-child, .markdown-preview[data-use-github-style] dl dd > :last-child { margin-bottom: 0px; }
 .markdown-preview blockquote p, .markdown-preview[data-use-github-style] blockquote p { font-size: 16px; line-height: 1.5; }
-.markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { padding: 16px; overflow: auto; font-size: 84%; line-height: 1.45; border-radius: 3px; background-color: rgb(35, 35, 35); }
+.markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { padding: 16px; overflow: auto; font-size: 84%; line-height: 1.45; border-radius: 3px; background-color: rgb(250, 250, 250); }
 .markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { margin-bottom: 16px; word-break: normal; }
 .markdown-preview code, .markdown-preview[data-use-github-style] code, .markdown-preview tt, .markdown-preview[data-use-github-style] tt, .markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { font-family: Consolas, 'Liberation Mono', Courier, monospace; }
 .markdown-preview .emoji, .markdown-preview[data-use-github-style] .emoji { height: 20px; width: 20px; }
-.markdown-preview { font-size: 1.25em; color: rgb(51, 51, 51); background-color: rgb(242, 242, 242); }
-.markdown-preview h1, .markdown-preview h2 { color: inherit; border-color: rgb(194, 194, 194); }
+.markdown-preview { font-size: 1.25em; color: rgb(66, 66, 66); background-color: rgb(255, 255, 255); }
+.markdown-preview h1, .markdown-preview h2 { color: inherit; border-color: rgb(209, 209, 209); }
 .markdown-preview a { color: rgb(20, 146, 255); }
-.markdown-preview hr { background-color: rgb(209, 209, 209); }
-.markdown-preview blockquote { color: rgb(51, 51, 51); border-left-color: rgb(133, 133, 133); }
-.markdown-preview table th, .markdown-preview table td { border-color: rgb(194, 194, 194); }
-.markdown-preview table th { background-color: rgb(250, 250, 250); }
-.markdown-preview table tr { background-color: rgb(242, 242, 242); }
-.markdown-preview table tr:nth-child(2n) { background-color: rgb(235, 235, 235); }
-.markdown-preview code { color: rgb(77, 77, 77); border-color: rgb(194, 194, 194); background-color: rgb(232, 232, 232); background-clip: padding-box; }
+.markdown-preview hr { background-color: rgb(224, 224, 224); }
+.markdown-preview blockquote { color: rgb(66, 66, 66); border-left-color: rgb(148, 148, 148); }
+.markdown-preview table th, .markdown-preview table td { border-color: rgb(209, 209, 209); }
+.markdown-preview table th { background-color: rgb(255, 255, 255); }
+.markdown-preview table tr { background-color: rgb(255, 255, 255); }
+.markdown-preview table tr:nth-child(2n) { background-color: rgb(247, 247, 247); }
+.markdown-preview code { color: rgb(92, 92, 92); border-color: rgb(209, 209, 209); background-color: rgb(247, 247, 247); background-clip: padding-box; }
 .markdown-preview pre.editor-colors::shadow .line.cursor-line { background-color: transparent; }
 .bracket-matcher .region {
   border-bottom: 1px dotted lime;
@@ -112,231 +112,557 @@
   border-bottom: 1px dashed rgba(250, 128, 114, 0.5);
 }
 
-.host,
-pre.editor-colors {
-  background-color: #232323;
-  color: #eeeeee;
+pre.editor-colors,
+.host {
+  background-color: #fafafa;
+  color: #575757;
 }
-.host .gutter,
-pre.editor-colors .gutter {
-  background-color: #232323;
-  color: #cccccc;
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: #eaeaea;
 }
-.host .gutter .line-number.cursor-line,
-pre.editor-colors .gutter .line-number.cursor-line {
-  background-color: #303030;
-  color: #eeeeee;
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: #eaeaea;
 }
-.host .gutter .line-number.cursor-line-no-selection,
-pre.editor-colors .gutter .line-number.cursor-line-no-selection {
-  color: #eeeeee;
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: #eaeaea;
 }
-.host .wrap-guide,
-pre.editor-colors .wrap-guide {
-  color: #3b3a32;
+pre.editor-colors .cursor-line,
+.host .cursor-line {
+  background-color: rgba(136, 136, 136, 0.03);
 }
-.host .indent-guide,
-pre.editor-colors .indent-guide {
-  color: #3b3a32;
+pre.editor-colors .gutter,
+.host .gutter {
+  background-color: #fafafa;
+  color: #888888;
 }
-.host .invisible-character,
-pre.editor-colors .invisible-character {
-  color: #3b3a32;
+pre.editor-colors .gutter .line-number,
+.host .gutter .line-number {
+  background-color: none !important;
 }
-.host .search-results .marker .region,
-pre.editor-colors .search-results .marker .region {
-  background-color: transparent;
-  border: #3b3a32;
+pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  background-color: rgba(136, 136, 136, 0.03);
+  color: #676767;
 }
-.host .search-results .marker.current-result .region,
-pre.editor-colors .search-results .marker.current-result .region {
-  border: #eeeeee;
+pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  color: #676767;
 }
-pre.editor-colors.is-focused .cursor,
-.host.is-focused .cursor {
-  border-color: #a7e150;
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #c9c9c9;
 }
-pre.editor-colors.is-focused .selection .region,
-.host.is-focused .selection .region {
-  background-color: #555a5d;
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #575757;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  color: #575757;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: rgba(103, 103, 103, 0.1);
+}
+pre.editor-colors::shadow .find-result .region {
+  background-color: rgba(217, 157, 98, 0.15);
+  border: 1px solid rgba(217, 157, 98, 0.6);
+}
+pre.editor-colors::shadow .highlight.current-result .region,
+pre.editor-colors::shadow .highlight.current-result ~ .highlight.selection .region {
+  background-color: rgba(209, 134, 60, 0.15);
 }
 .comment {
-  color: #777777;
+  color: #a8a8a8;
 }
-.string,
-.constant.character.escape,
-.constant.character.escape.scss {
-  color: #d9debf;
-}
-.string.quoted.double.html {
-  color: #d0c39b;
-}
-.constant.numeric {
-  color: #C7AF3F;
-}
-.constant.language {
-  color: #C7AF3F;
-}
-.constant.character,
-.constant.other {
-  color: #c7760b;
-}
-.variable {
-  color: #b57b91;
-}
-.keyword {
-  color: #9FB3C2;
-}
-.storage {
-  color: #9FB3C2;
-}
-.storage.type {
-  color: #e1a170;
-}
-.entity.name.class {
-  text-decoration: underline;
-  color: #C7AF3F;
+.entity.name.type {
+  color: #74aa74;
 }
 .entity.other.inherited-class {
-  text-decoration: underline;
-  color: #C7AF3F;
+  color: #539652;
 }
-.entity.name.function {
-  color: #C7AF3F;
+.keyword {
+  color: #85518a;
 }
-.variable.parameter {
-  color: #C7AF3F;
+.keyword.control {
+  color: #85518a;
 }
-.meta.function-call {
-  color: #efd77d;
+.keyword.operator {
+  color: #888888;
 }
-.entity.name.tag,
-.punctuation.definition.tag,
-.keyword.control.html.elements {
-  color: #C7AF3F;
+.keyword.logical {
+  color: #9c73a0;
 }
-.entity.other.attribute-name {
-  color: #8AB8A2;
+.keyword.other.special-method {
+  color: #406d9d;
+}
+.keyword.other.unit {
+  color: #d1863c;
+}
+.storage {
+  color: #85518a;
+}
+.storage.type {
+  color: #d99d62;
+}
+.constant {
+  color: #58a8a3;
+}
+.constant.character.escape {
+  color: #58a8a3;
+}
+.constant.numeric {
+  color: #d99d62;
+}
+.constant.other.color {
+  color: #58a8a3;
+}
+.constant.other.symbol {
+  color: #9c73a0;
+}
+.variable {
+  color: #a64d4d;
+}
+.variable.interpolation {
+  color: #833d3d;
+}
+.variable.parameter.function {
+  color: #575757;
+}
+.invalid.illegal {
+  background-color: #a64d4d;
+  color: #fafafa;
+}
+.string {
+  color: #539652;
+}
+.string.regexp {
+  color: #58a8a3;
+}
+.string.regexp .source.ruby.embedded {
+  color: #d1863c;
+}
+.string.other.link {
+  color: #a64d4d;
+}
+.punctuation.definition.comment {
+  color: #888888 !important;
+}
+.punctuation.definition.string,
+.punctuation.definition.variable,
+.punctuation.definition.parameters,
+.punctuation.definition.array {
+  color: #a8a8a8;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #6589b0;
+}
+.punctuation.definition.bold {
+  font-weight: bold;
+}
+.punctuation.definition.italic {
+  font-style: italic;
+}
+.punctuation.section.embedded {
+  color: #a64d4d;
+}
+.support.class {
+  color: #d99d62 !important;
+}
+.support.exception {
+  color: #a64d4d !important;
 }
 .support.function {
-  color: #C7AF3F;
+  color: #406d9d !important;
 }
-.support.constant {
-  color: #C7AF3F;
+.support.function.macro {
+  color: #78b8b4 !important;
 }
-.support.type,
-.support.class {
-  color: #C7AF3F;
+.support.function.any-method {
+  color: #406d9d !important;
 }
-.invalid {
-  color: #F8F8F0;
-  background-color: #00A8C6;
+.entity.name.function {
+  color: #406d9d;
 }
-.invalid.deprecated {
-  color: #F8F8F0;
-  background-color: #8FBE00;
+.entity.name.class,
+.entity.name.type.class {
+  color: #d99d62;
 }
-.meta.structure.dictionary.json .string.quoted.double.json {
-  color: #CFCFC2;
+.entity.name.section {
+  color: #406d9d;
 }
-.meta.diff,
-.meta.diff.header {
-  color: #75715E;
+.entity.name.tag {
+  color: #a64d4d;
 }
-.markup.deleted {
-  color: #00A8C6;
+.entity.other.attribute-name {
+  color: #539652;
 }
-.markup.inserted {
-  color: #A6E22E;
+.entity.other.attribute-name.id {
+  color: #406d9d;
+}
+.meta.class {
+  color: #d99d62;
+}
+.meta.link {
+  color: #d1863c;
+}
+.meta.require {
+  color: #406d9d;
+}
+.meta.selector {
+  color: #85518a;
+}
+.meta.separator {
+  background-color: #a8a8a8;
+  color: #575757;
+}
+.none {
+  color: #575757;
+}
+.markup.bold {
+  color: #d1863c;
+  font-weight: bold;
 }
 .markup.changed {
-  color: #E6DB74;
+  color: #85518a;
 }
-.constant.numeric.line-number.find-in-files:not(.match) {
-  color: rgba(143, 190, 0, 0.63);
+.markup.deleted {
+  color: #a64d4d;
 }
-.entity.name.filename.find-in-files {
-  color: #E6DB74;
+.markup.italic {
+  color: #85518a;
+  font-style: italic;
 }
-.support.type.property-name.css,
-.support.type.property-name.scss,
-.meta.property-list.css .meta.property-name.css,
-.meta.property-list.scss .meta.property-name.scss,
-.entity.name.tag.custom.scss {
-  color: #C5AF75;
+.markup.heading .punctuation.definition.heading {
+  color: #406d9d;
 }
-.meta.property-group .support.constant.property-value.css,
-.meta.property-list.css .meta.property-value.css,
-.meta.property-value .support.constant.property-value.css,
-.meta.property-group .support.constant.property-value.scss,
-.meta.property-value .support.constant.property-value.scss,
-.constant.numeric.css,
-.constant.numeric.scss,
-.variable.parameter.misc.css,
-.parameter.less.data-uri .comment .markup.raw,
-.source.less .meta.property-value.css {
-  color: #a4b3ca;
+.markup.inserted {
+  color: #539652;
 }
-.support.constant.named-color,
-.meta.property-value .constant,
-.keyword.other.unit,
-.constant.other.color.rgb-value,
-.constant.other.rgb-value.css {
-  color: #a4b3ca;
+.markup.list {
+  color: #a64d4d;
 }
-.meta.constructor.argument.css,
-.meta.constructor.argument.scss {
-  color: #8F9D6A;
+.markup.quote {
+  color: #d1863c;
 }
-.source.scss .entity.other.attribute-name.placeholder.scss {
-  color: #8F9D6A;
+.markup.raw.inline {
+  color: #539652;
 }
-.meta.preprocessor.at-rule .keyword.control.at-rule,
-.meta.at-rule.import,
-.keyword.control.at-rule {
-  color: #8693A5;
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
 }
-.keyword.other.important {
-  color: #ae5555;
+.source.gfm .markup.heading {
+  color: #539652;
 }
-.punctuation.terminator.rule,
-.punctuation.separator.key-value,
-.support.constant.mathematical-symbols.scss,
-.support.constant.mathematical-symbols.css,
-.punctuation.section.function {
-  color: #dedede;
+pre.editor-colors[mini] .scroll-view,
+.host([mini]) .scroll-view {
+  padding-left: 1px;
 }
-.source.scss .meta.set.variable .variable,
-.variable.scss {
-  color: #c07a7a;
+.link {
+  color: #888888 !important;
 }
-/* .source.scss .meta.property-list.scss .entity.name.tag.scss {
-
-} */
-.punctuation.section.embedded.begin.php,
-.punctuation.section.embedded.end.php {
-  color: #CF6A4C;
+.http,
+.hyperlink {
+  border-bottom: 1px dashed #406d9d;
 }
-.source.asp.embedded.html {
-  color: #CF6A4C;
+.punctuation {
+  color: #a8a8a8 !important;
 }
-.brackethighlighter.tag {
-  color: #CF6A4C;
+.brace {
+  color: #c9c9c9 !important;
 }
-.brackethighlighter.curly {
-  color: #CF6A4C;
+.brace .curly,
+.brace .square {
+  color: #c9c9c9 !important;
 }
-.brackethighlighter.round {
-  color: #CF6A4C;
+.cursor-line {
+  z-index: -100 !important;
 }
-.brackethighlighter.square {
-  color: #CF6A4C;
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
 }
-.brackethighlighter.angle {
-  color: #CF6A4C;
+.source.gfm .markup.heading {
+  color: #c9c9c9;
 }
-.brackethighlighter.quote {
-  color: #CF6A4C;
+.source.gfm .markup.heading.space,
+.source.gfm .markup.heading.marker {
+  text-decoration: none !important;
+  display: inline-block;
+  font-style: normal !important;
+}
+.source.gfm .markup.heading-1 {
+  color: #676767;
+  font-weight: bold;
+}
+.source.gfm .markup.heading-2 {
+  color: #888888;
+  font-weight: bold;
+}
+.source.gfm .markup.heading-3 {
+  color: #888888;
+}
+.source.gfm .markup.heading-4 {
+  color: #a8a8a8;
+}
+.source.gfm .markup.heading-5 {
+  color: #c9c9c9;
+}
+.source.gfm .markup.heading-6 {
+  color: #c9c9c9;
+  font-size: italic;
+}
+.source.gfm .markup.marker {
+  color: #74aa74 !important;
+  font-weight: normal !important;
+}
+.source.gfm .bold,
+.source.gfm .italic {
+  color: #575757;
+}
+.source.gfm .hr {
+  font-weight: bold;
+  color: #c9c9c9;
+}
+.source.gfm .list {
+  color: #539652;
+}
+.source.gfm .quote {
+  color: #888888;
+}
+.source.gfm .quote.support {
+  font-weight: bold;
+}
+.source.gfm .raw {
+  color: #888888;
+  border-radius: 3px;
+  background-color: #eaeaea;
+}
+.source.gfm .link .entity {
+  color: #539652;
+}
+.source.gfm .link .underline {
+  text-decoration: none;
+  border-bottom: 1px dashed #406d9d;
+}
+.source.gfm .link .punctuation {
+  color: #a8a8a8;
+  text-decoration: none !important;
+}
+.source.gfm .support {
+  color: #539652;
+}
+.source.gfm .mention {
+  color: #a8a8a8;
+}
+.source.gfm .username {
+  color: #d1863c;
+}
+.source.gfm .table.gfm .border {
+  color: #a8a8a8;
+  font-weight: bold;
+}
+.source.gfm .table.gfm .border.outer {
+  color: #888888;
+}
+.source.gfm .table.gfm .border.header {
+  color: #eaeaea;
+}
+.source.gfm .table.gfm .alignment {
+  color: #c9c9c9;
+}
+.source.gfm > .critic.gfm.addition {
+  color: #539652;
+}
+.source.gfm > .critic.gfm.deletion {
+  color: #a64d4d;
+}
+.source.gfm > .critic.gfm.substitution {
+  color: #85518a;
+}
+.source.gfm > .critic.gfm.comment {
+  color: #406d9d;
+}
+.source.gfm > .critic.gfm.highlight {
+  color: #d1863c;
+}
+.source.gfm > .critic.gfm .marker {
+  color: #c9c9c9 !important;
+}
+.source.gfm > .critic.gfm .operator {
+  color: #c9c9c9 !important;
+}
+.source .meta.diff.header.from-file {
+  color: #a64d4d;
+}
+.source .meta.diff.header.to-file {
+  color: #406d9d;
+}
+.source .meta.diff.range {
+  color: #eaeaea !important;
+}
+.source .meta.diff.line-number {
+  color: #676767 !important;
+  font-weight: bold;
+}
+.source .diff.deleted {
+  color: #a64d4d !important;
+  text-decoration: line-through;
+}
+.source .diff.inserted {
+  color: #539652 !important;
+  text-decoration: underline;
+}
+.indent-guide-improved {
+  width: 1px;
+  z-index: 1;
+  position: absolute;
+}
+.indent-guide-improved {
+  background-color: #eaeaea;
+}
+.indent-guide-improved.indent-guide-stack {
+  background-color: #eaeaea;
+}
+.indent-guide-improved.indent-guide-stack.indent-guide-active {
+  background-color: #c9c9c9;
+}
+.gutter .git-line-added {
+  color: #539652;
+}
+.gutter .git-line-added.cursor-line {
+  color: #539652;
+}
+.gutter .git-line-modified {
+  color: #406d9d;
+}
+.gutter .git-line-modified.cursor-line {
+  color: #406d9d;
+}
+.gutter .git-line-removed {
+  border-bottom: 1px dotted #a64d4d;
+}
+.git-config .constant {
+  color: #d1863c;
+}
+.git-config .boolean {
+  color: #85518a;
+}
+.git-config .name.section {
+  color: #58a8a3;
+}
+.git-config .name.subsection {
+  color: #539652;
+}
+.list-tree .status-modified,
+.tree-view-directory .status-modified {
+  color: #406d9d !important;
+}
+.list-tree .status-added,
+.tree-view-directory .status-added {
+  color: #539652 !important;
+}
+.list-tree li.list-nested-item.selected.status-modified > .list-item,
+.list-tree li.list-nested-item.status-modified > .list-item {
+  color: #406d9d !important;
+}
+.source.coffee .punctuation,
+.source.json .punctuation,
+.source.yaml .punctuation {
+  color: #c9c9c9 !important;
+}
+.source.json .dictionary .value .string {
+  color: #406d9d;
+}
+.source.yaml .tag {
+  color: #539652 !important;
+}
+.source.yaml .string.unquoted {
+  color: #406d9d;
+}
+.source.coffee .assignment {
+  color: #85518a !important;
+}
+.source.python .class {
+  color: #406d9d;
+}
+.source.python .class .inherited-class {
+  color: #a64d4d;
+}
+.source.python .function {
+  color: #85518a;
+}
+.source.python .function .name {
+  color: #6589b0;
+}
+.source.python .parameters .parameter {
+  color: #575757;
+}
+.todo,
+.fixme,
+.changed,
+.xxx,
+.note,
+.hack,
+.idea,
+.review {
+  background-color: #eaeaea !important;
+  color: #575757 !important;
+  padding: 0px 1px;
+  margin: 0px -1px;
+  border-radius: 3px;
+  z-index: 10000 !important;
+}
+.todo,
+.fixme {
+  color: #74aa74 !important;
+}
+.changed,
+.review {
+  color: #6589b0 !important;
+}
+.note,
+.idea {
+  color: #d99d62 !important;
+}
+.hack {
+  color: #b77070 !important;
+}
+.source.todo {
+  background: none !important;
+  border: none !important;
+}
+.source.todo .header {
+  color: #676767 !important;
+}
+.source.todo .header .header-title {
+  color: #539652;
+  font-weight: bold;
+}
+.source.todo .tasks {
+  color: #575757;
+}
+.source.todo .tasks .marker {
+  color: #888888 !important;
+}
+.source.todo .attribute {
+  color: #c9c9c9;
+}
+.source.todo .attribute-value {
+  color: #888888;
+}
+.source.todo .attribute-name {
+  color: #406d9d;
+}
+.spell-check-misspelling .region {
+  border-bottom: 1px dotted #a64d4d;
 }
 </style>
   </head>
@@ -393,7 +719,6 @@ pre.editor-colors.is-focused .selection .region,
 <li><a href="#cj-2">How did the C.J. decide when to jump?</a></li>
 <li><a href="#cj-3">How did the prosecution choose which toon to attack?</a></li>
 <li><a href="#cj-4">How was the scale related to the jury?</a></li>
-<li><a href="#cj-5">What was the optimal scalers-to-stunners ratio?</a></li>
 </ul>
 </li>
 <li><a href="#ceo">C.E.O.</a><ul>
@@ -433,7 +758,7 @@ pre.editor-colors.is-focused .selection .region,
 <li>It was used when calculating the value of <code style="font-family: Menlo;">atkHit</code>, which was a boolean value that represented whether or not an attack hit.</li>
 </ol>
 <h3 id="special-cases-a-name-toon-atk-acc-1-a-">Special Cases <a name="toon-atk-acc-1"></a></h3>
-<p>Fires and Trap have 95% and 100% accuracy respectively. In addition, both are always assigned an <code style="font-family: Menlo;">atkHit</code> of 1, which means they were <em>guaranteed</em> to hit.</p>
+<p>Fires and Trap have 95% and 100% accuracy respectively. In addition, both were always assigned an <code style="font-family: Menlo;">atkHit</code> of 1, which means they were <em>guaranteed</em> to hit.</p>
 <h3 id="equation-a-name-toon-atk-acc-2-a-">Equation <a name="toon-atk-acc-2"></a></h3>
 <p>A gag&#39;s overall accuracy was calculated using the following equation:</p>
 <pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>atkAcc</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>propAcc</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>+</span></span><span>&nbsp;</span><span>trackExp</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>+</span></span><span>&nbsp;</span><span>tgtDef</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>+</span></span><span>&nbsp;</span><span>bonus</span></span></div></pre>
@@ -634,7 +959,7 @@ pre.editor-colors.is-focused .selection .region,
 <p>Now, consider that Toon 1 uses a Birthday Cake on cog C (index 2).</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>:BattleCalculatorAI(debug):&nbsp;activeSuits&nbsp;=&nbsp;[A,&nbsp;B,&nbsp;C,&nbsp;D]</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>:BattleCalculatorAI(debug):&nbsp;suits&nbsp;=&nbsp;[A,&nbsp;D,&nbsp;B,&nbsp;C]</span></span></span></div></pre><p>In the above, <code style="font-family: Menlo;">activeSuits</code> is ordered as expected and would result in cog C getting the bonus. However, the game actually used the ordering of <code style="font-family: Menlo;">suits</code>!</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>:BattleCalculatorAI(debug):&nbsp;track&nbsp;=&nbsp;4</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>:BattleCalculatorAI(debug):&nbsp;tgtPos&nbsp;=&nbsp;suits.index(C)&nbsp;=&nbsp;3</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>:BattleCalculatorAI(debug):&nbsp;kbBonuses[tgtPos][track]&nbsp;=&nbsp;[0,&nbsp;100.0]</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>:BattleCalculatorAI(debug):&nbsp;Applying&nbsp;kbBonus&nbsp;(100.0&nbsp;*&nbsp;0.5&nbsp;dmg)&nbsp;to&nbsp;activeSuit&nbsp;at&nbsp;tgtPos&nbsp;3</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>:BattleCalculatorAI(debug):&nbsp;activeSuit&nbsp;C&nbsp;takes&nbsp;100.0&nbsp;damage</span></span></span></div></pre><p>As you can see, it used the index of cog C from <code style="font-family: Menlo;">suits</code> on the cog at the same index in <code style="font-family: Menlo;">activeSuits</code>, which was cog D.</p>
-<h2 id="-carryover-"><code style="font-family: Menlo;">&quot;Carryover&quot;</code></h2>
+<h2 id="carryover">Carryover</h2>
 <p>&quot;Carryover&quot; damage only applied to version 2.0 cogs. Every time an instance of damage was done, the game checked to see if the cog was dead. Once the first layer was destroyed, any further instances of damage done would bleed through to the skelecog layer. For all calculation purposes, the game calculated the instances of damages in the order of gag damage (Red), <code style="font-family: Menlo;">hpBonus</code> (Yellow) and then <code style="font-family: Menlo;">kbBonus</code> (Orange). </p>
 <p>Suppose we have 3 toons use maxed Storm Clouds against a lured Level 12 The Big Cheese V2.0.</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Toon&nbsp;1&nbsp;=&nbsp;80&nbsp;damage&nbsp;(Red).&nbsp;Is&nbsp;the&nbsp;cog&nbsp;destroyed?&nbsp;No,&nbsp;HP&nbsp;=&nbsp;120.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Toon&nbsp;2&nbsp;=&nbsp;80&nbsp;damage&nbsp;(Red).&nbsp;Is&nbsp;the&nbsp;cog&nbsp;destroyed?&nbsp;No,&nbsp;HP&nbsp;=&nbsp;40.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Toon&nbsp;3&nbsp;=&nbsp;80&nbsp;damage&nbsp;(Red).&nbsp;Is&nbsp;the&nbsp;cog&nbsp;destroyed?&nbsp;Yes,&nbsp;but&nbsp;it&nbsp;is&nbsp;a&nbsp;version&nbsp;2.0,&nbsp;so&nbsp;revive&nbsp;it&nbsp;with&nbsp;max&nbsp;HP.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>hpBonus&nbsp;is&nbsp;calculated&nbsp;(240&nbsp;*&nbsp;0.20&nbsp;=&nbsp;48).&nbsp;Is&nbsp;the&nbsp;skelecog&nbsp;destroyed?&nbsp;No,&nbsp;HP&nbsp;=&nbsp;152.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>kbBonus&nbsp;is&nbsp;calculated&nbsp;(240&nbsp;*&nbsp;0.5&nbsp;=&nbsp;120).&nbsp;Is&nbsp;the&nbsp;skelecog&nbsp;destroyed?&nbsp;No,&nbsp;HP&nbsp;=&nbsp;32.</span></span></span></div></pre><h2 id="cog-attack-accuracy-a-name-cog-atk-acc-a-">Cog Attack Accuracy <a name="cog-atk-acc"></a></h2>
@@ -739,7 +1064,7 @@ pre.editor-colors.is-focused .selection .region,
 <p>If the Doodle was tired either at the Estate or the battle selection screen, <code style="font-family: Menlo;">cutoff</code> was multiplied by 0.5. </p>
 <p>If the Doodle had a negative mood at the Estate, but had a positive mood on the battle selection screen, <code style="font-family: Menlo;">minApt</code> and <code style="font-family: Menlo;">maxApt</code> would still equal 0.5 and 0.97 respectively. </p>
 <p>If the Doodle had negative moods in both the Estate and the battle selection screen, <code style="font-family: Menlo;">minApt = 0.1</code> and <code style="font-family: Menlo;">maxApt = 0.6</code>. However, <code style="font-family: Menlo;">cutoff</code> would not be multiplied by 0.5 unless one of the negative moods was tired.</p>
-<p>Once the final value of <code style="font-family: Menlo;">cutoff</code> was determined, an pseudo-RNG called <code style="font-family: Menlo;">randVal</code> generated a value between 0.0 and 1.0. If <code style="font-family: Menlo;">cutoff</code> was greater than <code style="font-family: Menlo;">randVal</code>, the Doodle would successfully perform the trick. Otherwise, the Doodle would not perform the trick.</p>
+<p>Once the final value of <code style="font-family: Menlo;">cutoff</code> was determined, a pseudorandom number, <code style="font-family: Menlo;">randVal</code>, was generated such that 0.0 &lt;= <code style="font-family: Menlo;">randVal</code> &lt; 1.0. If <code style="font-family: Menlo;">cutoff</code> was greater than <code style="font-family: Menlo;">randVal</code>, the Doodle would successfully perform the trick. Otherwise, the Doodle would not perform the trick.</p>
 <p>Below is a table that shows the final <code style="font-family: Menlo;">cutoff</code> value for each trick, assuming the doodle was maxed in said trick, and had no negative emotions on both the battle selection screen and the Estate.</p>
 <table>
 <thead>
@@ -780,7 +1105,7 @@ pre.editor-colors.is-focused .selection .region,
 </tbody>
 </table>
 <p>Based on the above table, it&#39;s possible to quantitatively compare the effectiveness of each trick. Consider the following:</p>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Expected&nbsp;Laff&nbsp;=&nbsp;cutoff&nbsp;*&nbsp;Laff&nbsp;Given</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.970&nbsp;*&nbsp;10&nbsp;=&nbsp;9.7000&nbsp;Laff&nbsp;(Jump)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.873&nbsp;*&nbsp;12&nbsp;=&nbsp;10.476&nbsp;Laff&nbsp;(Beg)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.776&nbsp;*&nbsp;14&nbsp;=&nbsp;10.864&nbsp;Laff&nbsp;(Play&nbsp;Dead)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.679&nbsp;*&nbsp;16&nbsp;=&nbsp;10.864&nbsp;Laff&nbsp;(Rollover)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.582&nbsp;*&nbsp;18&nbsp;=&nbsp;10.476&nbsp;Laff&nbsp;(Backflip)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.485&nbsp;*&nbsp;20&nbsp;=&nbsp;9.7000&nbsp;Laff&nbsp;(Dance)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.388&nbsp;*&nbsp;22&nbsp;=&nbsp;8.5360&nbsp;Laff&nbsp;(Speak)</span></span></span></div></pre><p>As you can see, maxed Play Dead and Rollover are the most efficient tricks. Therefore Play Dead is likely the only trick worth training.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Expected&nbsp;Laff&nbsp;=&nbsp;cutoff&nbsp;*&nbsp;Laff&nbsp;Given</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.970&nbsp;*&nbsp;10&nbsp;=&nbsp;9.7000&nbsp;Laff&nbsp;(Jump)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.873&nbsp;*&nbsp;12&nbsp;=&nbsp;10.476&nbsp;Laff&nbsp;(Beg)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.776&nbsp;*&nbsp;14&nbsp;=&nbsp;10.864&nbsp;Laff&nbsp;(Play&nbsp;Dead)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.679&nbsp;*&nbsp;16&nbsp;=&nbsp;10.864&nbsp;Laff&nbsp;(Rollover)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.582&nbsp;*&nbsp;18&nbsp;=&nbsp;10.476&nbsp;Laff&nbsp;(Backflip)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.485&nbsp;*&nbsp;20&nbsp;=&nbsp;9.7000&nbsp;Laff&nbsp;(Dance)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.388&nbsp;*&nbsp;22&nbsp;=&nbsp;8.5360&nbsp;Laff&nbsp;(Speak)</span></span></span></div></pre><p>As you can see, maxed Play Dead and Rollover were the most efficient tricks. Therefore Play Dead was likely the only trick worth training, since it maximized the work-reward ratio.</p>
 <h2 id="fishing-a-name-fishing-main-a-">Fishing <a name="fishing-main"></a></h2>
 <p>[<a href="#contents">back to top</a>]</p>
 <h3 id="-itemtype-"><code style="font-family: Menlo;">itemType</code></h3>
@@ -831,13 +1156,12 @@ pre.editor-colors.is-focused .selection .region,
 </tbody>
 </table>
 <ul>
-<li><p><code style="font-family: Menlo;">rodDict</code>:</p>
-</li>
-<li><p><code style="font-family: Menlo;">rarityDict</code>:</p>
-</li>
-<li><p><code style="font-family: Menlo;">fishList</code>:</p>
-</li>
+<li><code style="font-family: Menlo;">fishList</code>: </li>
 </ul>
+<p>After the calculation of <code style="font-family: Menlo;">rarity</code>, the possible fish were narrowed by pond location and rod used. Then, the possible fish were further subdivided into multiple <code style="font-family: Menlo;">fishList</code>s, each associated with a particular <code style="font-family: Menlo;">rarity</code> value. All possible combinations can be <a href="http://pastebin.com/as4BKA3E">seen here</a>. </p>
+<p>After selecting a genus and species, the fish&#39;s weight was calculated according to the following process:</p>
+<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>minWeight</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>max</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>minFishWeight</span><span>,&nbsp;</span><span>minRodWeight</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>maxWeight</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>min</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>maxFishWeight</span><span>,&nbsp;</span><span>maxRodWeight</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>randNumA</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>random.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>random</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>&nbsp;</span><span class="comment line number-sign python"><span class="punctuation definition comment python"><span>#</span></span><span>&nbsp;A&nbsp;real&nbsp;number&nbsp;between&nbsp;0.0&nbsp;and&nbsp;1.0</span></span></span></div><div class="line"><span class="source python"><span>randNumB</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>random.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>random</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>&nbsp;</span><span class="comment line number-sign python"><span class="punctuation definition comment python"><span>#</span></span><span>&nbsp;A&nbsp;real&nbsp;number&nbsp;between&nbsp;0.0&nbsp;and&nbsp;1.0</span></span></span></div><div class="line"><span class="source python"><span>randNum</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>(</span><span>randNumA</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>+</span></span><span>&nbsp;</span><span>randNumB</span><span>)</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>/</span></span><span>&nbsp;</span><span class="constant numeric float python"><span>2.0</span></span></span></div><div class="line"><span class="source python"><span>randWeight</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>minWeight</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>+</span></span><span>&nbsp;</span><span>(</span><span>maxWeight</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span>minWeight</span><span>)</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span>randNum</span></span></div><div class="line"><span class="source python"><span>randWeight</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>int</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span class="meta function-call python"><span class="support function builtin python"><span>round</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>randWeight</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>16</span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div></pre>
+<p>If no <code style="font-family: Menlo;">fishList</code> was associated with the calculated <code style="font-family: Menlo;">rarity</code> value, a Balloon Fish weighing 0lbs was caught.</p>
 <h3 id="-jellybeanitem-"><code style="font-family: Menlo;">JellybeanItem</code></h3>
 <p>In this case, Jellybeans were awarded according to the following table.</p>
 <table>
@@ -892,9 +1216,9 @@ pre.editor-colors.is-focused .selection .region,
 </ul>
 <p>Now, one of the following also needed to be true:</p>
 <ul>
-<li>Both Lure and Trap are single-cog, and the target is the same.</li>
-<li>The Trap is multi-cog.</li>
-<li>The Lure is multi-cog.</li>
+<li>Both Lure and Trap were single-cog, and the target was the same.</li>
+<li>The Trap was multi-cog.</li>
+<li>The Lure was multi-cog.</li>
 </ul>
 <p>So, the only scenario in which Trap did not give Lure an accuracy boost was if both Lure and Trap were single-cog, and the target was different.</p>
 <p>Multiple Traps did give multiple boosts, with an accuracy boost of up to +60 to the Lure being possible. Of course, this required multiple cogs to be in play for the Traps to be layed out.</p>
@@ -960,9 +1284,10 @@ pre.editor-colors.is-focused .selection .region,
 <p>(See <a href="#toon-atk-acc">Toon Attack Accuracy</a> for information on <code style="font-family: Menlo;">atkAcc</code>.)</p>
 <p>With the above in mind, it can also be useful to think in terms of <code style="font-family: Menlo;">wakeupChance</code>&#39;s probabilistic complement: The probability that a given SOS card will hold for a specific number of rounds. In order to do so, we must apply the Rule of Multiplication:</p>
 <blockquote>
-<p>The probability that Events A and B both occur is equal to the probability that Event A occurs times the probability that Event B occurs, given that A has occurred: P(A ∩ B) = P(A) P(B|A)</p>
+<p>If events A and B come from the same sample space, the probability that both A and B occur is equal to the probability the event A occurs times the probability that B occurs, given that A has occurred.</p>
+<p>P(A ∩ B) = P(A) P(B|A)</p>
 </blockquote>
-<p>(Source: <a href="http://stattrek.com/probability/probability-rules.aspx">Probability Rules</a>.)</p>
+<p>   (Source: <a href="http://stattrek.com/statistics/dictionary.aspx?definition=Multiplication_rule">Probability Rules</a>.)</p>
 <p>However, given that each round is calculated independent of any prior results, we note that P(B|A) = P(B). Thus, the following equation can be used to determine the probability that a single cog will stay lured for N rounds:</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Given&nbsp;(Max&nbsp;rounds&nbsp;-&nbsp;N)&nbsp;&gt;=&nbsp;0,</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(N&nbsp;rounds)&nbsp;=&nbsp;[1&nbsp;-&nbsp;(wakeupChance&nbsp;/&nbsp;100)]&nbsp;^&nbsp;(N&nbsp;-&nbsp;1)</span></span></span></div></pre><p>Here are some example calculations:</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Given:&nbsp;a&nbsp;Lureless&nbsp;toon&nbsp;using&nbsp;Lil&#39;&nbsp;Oldman</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Questions:&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>a.&nbsp;what&nbsp;is&nbsp;the&nbsp;probability&nbsp;that&nbsp;a&nbsp;level&nbsp;12&nbsp;cog&nbsp;will&nbsp;stay&nbsp;lured&nbsp;for&nbsp;3&nbsp;rounds?</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>b.&nbsp;what&nbsp;is&nbsp;the&nbsp;probability&nbsp;that&nbsp;4&nbsp;level&nbsp;12&nbsp;cogs&nbsp;will&nbsp;stay&nbsp;lured&nbsp;for&nbsp;3&nbsp;rounds?</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Answer:&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>a.</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;atkAcc&nbsp;=&nbsp;70&nbsp;(propAcc)&nbsp;+&nbsp;0&nbsp;(trackExp)&nbsp;+&nbsp;(-55)&nbsp;(tgtDef)&nbsp;+&nbsp;0&nbsp;(bonus)&nbsp;=&nbsp;15</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;wakeupChance&nbsp;=&nbsp;100&nbsp;-&nbsp;(15&nbsp;*&nbsp;2)&nbsp;=&nbsp;70</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>3.&nbsp;P(3&nbsp;rounds)&nbsp;=&nbsp;[1&nbsp;-&nbsp;(70&nbsp;/&nbsp;100)]&nbsp;^&nbsp;(3&nbsp;-&nbsp;1)&nbsp;=&nbsp;0.09&nbsp;(Check:&nbsp;4&nbsp;-&nbsp;3&nbsp;&gt;=&nbsp;0?&nbsp;Yep.)</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>b.</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;The&nbsp;probability&nbsp;that&nbsp;a&nbsp;single&nbsp;level&nbsp;12&nbsp;cog&nbsp;will&nbsp;stay&nbsp;lured&nbsp;for&nbsp;3&nbsp;rounds&nbsp;is&nbsp;9.0%.&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;The&nbsp;probability&nbsp;that&nbsp;all&nbsp;4&nbsp;will&nbsp;stay&nbsp;lured&nbsp;for&nbsp;3&nbsp;rounds&nbsp;is&nbsp;(.09)&nbsp;^&nbsp;4&nbsp;=&nbsp;0.00006561.</span></span></span></div></pre><h3 id="battle-simulations">Battle Simulations</h3>
@@ -1028,7 +1353,7 @@ pre.editor-colors.is-focused .selection .region,
 <p>Every cycle, each prosecuting cog had a 50/50 chance to either (1) attack a toon or (2) hit the scale. If option 1 was selected, a toon was chosen at random from a list of all toons in the battle. </p>
 <h2 id="how-was-the-scale-related-to-the-jury-a-name-cj-4-a-">How was the scale related to the jury? <a name="cj-4"></a></h2>
 <p>When determining how the amount of Toon jurors affected the scale, the following formula was used.</p>
-<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>jurorsOver</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="variable language python"><span>self</span></span><span>.numToonJurorsSeated</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span>ToontownGlobals.</span><span>L</span><span>awbotBossJurorsForBalancedScale</span></span></div><div class="line"><span class="source python"><span>dmgAdjust</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>jurorsOver</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span>ToontownGlobals.</span><span>L</span><span>awbotBossDamagePerJuror</span></span></div></pre>
+<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>jurorsOver</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>numToonJurorsSeated</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span>LawbotBossJurorsForBalancedScale</span></span></div><div class="line"><span class="source python"><span>dmgAdjust</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>jurorsOver</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span>LawbotBossDamagePerJuror</span></span></div></pre>
 <p><code style="font-family: Menlo;">jurorsOver</code> was determined by taking the amount of Toon jurors seated and then subtracting it by the amount needed for a balanced scale (8 for non-modified servers). That amount was then multiplied by the damage amount each Toon juror done, which was set to 68 per toon juror. The result was then referred to as <code style="font-family: Menlo;">dmgAdjust</code>. </p>
 <p>The initial damage of the scale was calculated at 1350. <code style="font-family: Menlo;">dmgAdjust</code> was then added to the initial damage of the scale. Given how the formula is calculated, we can establish the following ratios for the initial amount of evidence in the prosecution and defense pans, based on the amount of Toon jurors seated.</p>
 <table>
@@ -1108,8 +1433,7 @@ pre.editor-colors.is-focused .selection .region,
 </tbody>
 </table>
 <p>The above data can also be expressed through the following formulas:</p>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Initial&nbsp;Cog&nbsp;Evidence&nbsp;=&nbsp;1894&nbsp;-&nbsp;68&nbsp;*&nbsp;(#&nbsp;toons&nbsp;seated)</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Initial&nbsp;Toon&nbsp;Evidence&nbsp;=&nbsp;2700&nbsp;-&nbsp;Initial&nbsp;Cog&nbsp;Evidence</span></span></span></div></pre><h2 id="what-was-the-optimal-scalers-to-stunners-ratio-a-name-cj-5-a-">What was the optimal scalers-to-stunners ratio? <a name="cj-5"></a></h2>
-<h1 id="c-e-o-a-name-ceo-a-">C.E.O. <a name="ceo"></a></h1>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Initial&nbsp;Cog&nbsp;Evidence&nbsp;=&nbsp;1894&nbsp;-&nbsp;68&nbsp;*&nbsp;(#&nbsp;toons&nbsp;seated)</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Initial&nbsp;Toon&nbsp;Evidence&nbsp;=&nbsp;2700&nbsp;-&nbsp;Initial&nbsp;Cog&nbsp;Evidence</span></span></span></div></pre><h1 id="c-e-o-a-name-ceo-a-">C.E.O. <a name="ceo"></a></h1>
 <p>[<a href="#contents">back to top</a>]</p>
 <h2 id="how-did-the-c-e-o-choose-which-attack-to-use-a-name-ceo-1-a-">How did the C.E.O. choose which attack to use? <a name="ceo-1"></a></h2>
 <h2 id="how-did-the-c-e-o-choose-which-toon-to-attack-a-name-ceo-2-a-">How did the C.E.O. choose which toon to attack? <a name="ceo-2"></a></h2>
@@ -1133,7 +1457,7 @@ pre.editor-colors.is-focused .selection .region,
 <li>Order by track: Toon-up, Trap, Lure, Sound, Throw, Squirt and then Drop.</li>
 <li>Order by gag level (lowest to highest) within each track.</li>
 </ol>
-<p>From here, for all calculation purposes, attacks are considered in pairs (the previous attack and the current attack) within each track.</p>
+<p>From here, for all calculation purposes, attacks were considered in pairs (the previous attack and the current attack) within each track.</p>
 <p>Now, we need to cover four more sub-cases:</p>
 <ol>
 <li>Toon-up gags were always evaluated independently.</li>
@@ -1142,7 +1466,7 @@ pre.editor-colors.is-focused .selection .region,
 <li>For all other tracks, if the previous gag in the particular track had the same target as the current, the current inherited the result of the previous.</li>
 </ol>
 <h2 id="was-it-possible-for-two-gags-of-the-same-track-aiming-for-the-same-cog-to-have-different-hit-miss-results-a-name-misc-3-a-">Was it possible for two gags of the same track, aiming for the same cog, to have different hit/miss results? <a name="misc-3"></a></h2>
-<p>Yes, do to how toon attacks are ordered (see previous question), it was possible for &quot;mismatches&quot; to occur. Essentially, this was caused by the fact that attacks are only considered in pairs. For example, consider the following scenario with three Trapless toons with maxed gags (1 - 3) and two level 12 cogs (A and B):</p>
+<p>Yes, do to how toon attacks were ordered (see previous question), it was possible for &quot;mismatches&quot; to occur. Essentially, this was caused by the fact that attacks were only considered in pairs. For example, consider the following scenario with three Trapless toons with maxed gags (1 - 3) and two level 12 cogs (A and B):</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;</span><span class="meta paragraph text"><span>B&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>3&nbsp;2&nbsp;1</span></span></span></div></pre><ul>
 <li>Toon 1 uses a Safe on Cog A</li>
 <li>Toon 2 uses a Safe on Cog B</li>
@@ -1150,22 +1474,22 @@ pre.editor-colors.is-focused .selection .region,
 </ul>
 <p>Here, the attack order is 1, 2, 3 which means:</p>
 <ol>
-<li>Toon 1&#39;s Safe is evaluated.</li>
-<li>Toon 2&#39;s Safe is evaluated, but isn&#39;t assigned the result of 1 because it has a different target.</li>
-<li>Toon 3&#39;s Safe is evaluated, but isn&#39;t assigned the result of 2 because it has a different target. </li>
+<li>Toon 1&#39;s Safe was evaluated.</li>
+<li>Toon 2&#39;s Safe was evaluated, but wasn&#39;t assigned the result of 1 because it had a different target.</li>
+<li>Toon 3&#39;s Safe was evaluated, but wasn&#39;t assigned the result of 2 because it had a different target. </li>
 </ol>
-<p>So, in this situation, it&#39;s possible for only one Safe to hit Cog A.</p>
+<p>So, in this situation, it was possible for only one Safe to hit Cog A.</p>
 <p>At first glance this may appear to be rather undesirable, however it&#39;s important to fully understand the impact of independent calculations. There are two key areas to consider: expected damage and battle duration.</p>
 <p>Let&#39;s first look at the expected damage on cog A <em>without an attack mismatch</em>.</p>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;</span><span class="meta paragraph text"><span>B&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>3&nbsp;2&nbsp;1</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;1&nbsp;uses&nbsp;Safe&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;2&nbsp;uses&nbsp;Safe&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;3&nbsp;uses&nbsp;Safe&nbsp;on&nbsp;cog&nbsp;B</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>atkAcc&nbsp;=&nbsp;50&nbsp;+&nbsp;60&nbsp;+&nbsp;(-55)&nbsp;+&nbsp;0&nbsp;=&nbsp;55</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;atkAcc&nbsp;/&nbsp;100&nbsp;=&nbsp;0.55</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(only&nbsp;Toon&nbsp;1&nbsp;hit&nbsp;or&nbsp;only&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;0&nbsp;(shared&nbsp;calculation)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;miss)&nbsp;=&nbsp;1&nbsp;-&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;0.45</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(at&nbsp;least&nbsp;Toon&nbsp;1&nbsp;or&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;0.55</span></span></span></div></pre><p>In this case, there&#39;s a 55% chance (both Safes hit) that damage is done to cog A and a 45% chance (both Safes miss) that no damage is done to cog A.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;</span><span class="meta paragraph text"><span>B&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>3&nbsp;2&nbsp;1</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;1&nbsp;uses&nbsp;Safe&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;2&nbsp;uses&nbsp;Safe&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;3&nbsp;uses&nbsp;Safe&nbsp;on&nbsp;cog&nbsp;B</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>atkAcc&nbsp;=&nbsp;50&nbsp;+&nbsp;60&nbsp;+&nbsp;(-55)&nbsp;+&nbsp;0&nbsp;=&nbsp;55</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;atkAcc&nbsp;/&nbsp;100&nbsp;=&nbsp;0.55</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(only&nbsp;Toon&nbsp;1&nbsp;hit&nbsp;or&nbsp;only&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;0&nbsp;(shared&nbsp;calculation)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;miss)&nbsp;=&nbsp;1&nbsp;-&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;0.45</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(at&nbsp;least&nbsp;Toon&nbsp;1&nbsp;or&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;0.55</span></span></span></div></pre><p>In this case, there was a 55% chance (both Safes hit) that damage was done to cog A and a 45% chance (both Safes miss) that no damage was done</p>
 <p>Now, let&#39;s look at the expected damage on cog A <em>with an attack mismatch</em>.</p>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;</span><span class="meta paragraph text"><span>B&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>3&nbsp;2&nbsp;1</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;1&nbsp;uses&nbsp;Safe&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;2&nbsp;uses&nbsp;Safe&nbsp;on&nbsp;cog&nbsp;B</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;3&nbsp;uses&nbsp;Safe&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>atkAcc&nbsp;=&nbsp;50&nbsp;+&nbsp;60&nbsp;+&nbsp;(-55)&nbsp;+&nbsp;0&nbsp;=&nbsp;55</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;(atkAcc&nbsp;/&nbsp;100)&nbsp;^&nbsp;2&nbsp;=&nbsp;0.3025</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(only&nbsp;Toon&nbsp;1&nbsp;hit&nbsp;or&nbsp;only&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;(0.45&nbsp;*&nbsp;0.55)&nbsp;*&nbsp;2&nbsp;=&nbsp;0.495</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;miss)&nbsp;=&nbsp;(1&nbsp;-&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;hit))^2&nbsp;=&nbsp;0.2025</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(at&nbsp;least&nbsp;Toon&nbsp;1&nbsp;or&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;0.3025&nbsp;+&nbsp;0.495&nbsp;=&nbsp;0.7975</span></span></span></div></pre><p>You&#39;ll note that there&#39;s a 24.75% decrease (0.3025 vs. 0.55) to the odds that two Safes hit cog A compared to without an attack mismatch. However, this decrease doesn&#39;t actually constitute an overall loss in expected damage: it&#39;s simply more evenly distributed. This is evident in the probability that at least one Safe hits, which is 79.75% vs. 55% <em>in favor of attack mismatches</em>. To further clarify the difference, let&#39;s take a closer look at the possible outcomes. </p>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>HH&nbsp;=&nbsp;Both&nbsp;hit</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>HM&nbsp;=&nbsp;First&nbsp;hit,&nbsp;second&nbsp;miss</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>MH&nbsp;=&nbsp;First&nbsp;miss,&nbsp;second&nbsp;hit</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>MM&nbsp;=&nbsp;Both&nbsp;miss</span></span></span></div></pre><p>As you can see, there are three outcomes which result in damage to a cog: HH, HM and MH. However, without attack mismatches, accuracy inheritance eliminates both HM and MH. This loss of opportunity can only be offset by a large decrease to the probability of HH. For instance, in the above example there&#39;s a difference of 24.75%, which is just enough to make up for the loss (see <a href="http://pastebin.com/bzugMzEs">Level 12 Big Wig; Safe + Safe</a>). Thus, the key factor is the fact that as the probability of HH increases, the difference between the probability of HH with and without attack mismatches decreases. Take, for example, maxed Storm Cloud:</p>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;</span><span class="meta paragraph text"><span>B&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>3&nbsp;2&nbsp;1</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>atkAcc&nbsp;=&nbsp;95&nbsp;+&nbsp;60&nbsp;+&nbsp;(-55)&nbsp;+&nbsp;0&nbsp;=&nbsp;100&nbsp;(capped&nbsp;to&nbsp;95).</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>a)&nbsp;No&nbsp;mismatches</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;1&nbsp;uses&nbsp;Storm&nbsp;Cloud&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;2&nbsp;uses&nbsp;Storm&nbsp;Cloud&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;3&nbsp;uses&nbsp;Storm&nbsp;Cloud&nbsp;on&nbsp;cog&nbsp;B</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;atkAcc&nbsp;/&nbsp;100&nbsp;=&nbsp;0.95</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(only&nbsp;Toon&nbsp;1&nbsp;hit&nbsp;or&nbsp;only&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;0&nbsp;(shared&nbsp;calculation)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;miss)&nbsp;=&nbsp;1&nbsp;-&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;0.05</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(at&nbsp;least&nbsp;Toon&nbsp;1&nbsp;or&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;0.95</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>b)&nbsp;Mismatches</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;1&nbsp;uses&nbsp;Storm&nbsp;Cloud&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;2&nbsp;uses&nbsp;Storm&nbsp;Cloud&nbsp;on&nbsp;cog&nbsp;B</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;3&nbsp;uses&nbsp;Storm&nbsp;Cloud&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;(atkAcc&nbsp;/&nbsp;100)&nbsp;^&nbsp;2&nbsp;=&nbsp;0.9025</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(only&nbsp;Toon&nbsp;1&nbsp;hit&nbsp;or&nbsp;only&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;(0.05&nbsp;*&nbsp;0.95)&nbsp;*&nbsp;2&nbsp;=&nbsp;0.095</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;miss)&nbsp;=&nbsp;(1&nbsp;-&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;hit))&nbsp;^&nbsp;2&nbsp;=&nbsp;0.0025</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(at&nbsp;least&nbsp;Toon&nbsp;1&nbsp;or&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;0.9025&nbsp;+&nbsp;0.095&nbsp;=&nbsp;0.9975</span></span></span></div></pre><p>As shown above, there&#39;s now only a 4.75% difference in the probability of HH. You might be tempted to point out that we also only saw a 4.75% increase in P(at least Toon 1 or Toon 2 hit), which is true, but there&#39;s another factor: one hit is significantly better than no hits. Think about it in terms of the number of possible ways to defeat a cog:</p>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Cog&nbsp;HP&nbsp;=&nbsp;200</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>a)&nbsp;No&nbsp;mismatches</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;HH&nbsp;+&nbsp;32&nbsp;=&nbsp;(80&nbsp;+&nbsp;80)&nbsp;+&nbsp;32&nbsp;=&nbsp;192&nbsp;(P&nbsp;=&nbsp;0.95)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;192&nbsp;+&nbsp;(HH&nbsp;+&nbsp;32)&nbsp;=&nbsp;384&nbsp;(P&nbsp;=&nbsp;0.9025).</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>b)&nbsp;Mismatches</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;HH&nbsp;+&nbsp;32&nbsp;=&nbsp;(80&nbsp;+&nbsp;80)&nbsp;+&nbsp;32&nbsp;=&nbsp;192&nbsp;(P&nbsp;=&nbsp;0.9025).</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;192&nbsp;+&nbsp;(HH&nbsp;+&nbsp;32)&nbsp;=&nbsp;384&nbsp;(P&nbsp;=&nbsp;0.8145)</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>OR</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;HH&nbsp;+&nbsp;32&nbsp;=&nbsp;(80&nbsp;+&nbsp;80)&nbsp;+&nbsp;32&nbsp;=&nbsp;192&nbsp;(P&nbsp;=&nbsp;0.9025).</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;192&nbsp;+&nbsp;HM&nbsp;=&nbsp;192&nbsp;+&nbsp;80&nbsp;=&nbsp;272&nbsp;(P&nbsp;=&nbsp;0.042869).</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>OR</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;HH&nbsp;+&nbsp;32&nbsp;=&nbsp;192&nbsp;(P&nbsp;=&nbsp;0.9025).</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;192&nbsp;+&nbsp;MH&nbsp;=&nbsp;192&nbsp;+&nbsp;80&nbsp;=&nbsp;272&nbsp;(P&nbsp;=&nbsp;0.042869).</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>OR</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;MH&nbsp;=&nbsp;80&nbsp;(P&nbsp;=&nbsp;0.0475).</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;80&nbsp;+&nbsp;(HH&nbsp;+&nbsp;32)&nbsp;=&nbsp;272&nbsp;(P&nbsp;=&nbsp;0.042869).</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>OR</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;HM&nbsp;=&nbsp;80&nbsp;(P&nbsp;=&nbsp;0.0475).</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;80&nbsp;+&nbsp;(HH&nbsp;+&nbsp;32)&nbsp;=&nbsp;272&nbsp;(P&nbsp;=&nbsp;0.042869).</span></span></span></div></pre><p>As you can see, attack mismatches give us 5 ways to win vs. 1 without them. With the above in mind, we can conclude that attack mismatches should be preferred in any of the following scenarios.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;</span><span class="meta paragraph text"><span>B&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>3&nbsp;2&nbsp;1</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;1&nbsp;uses&nbsp;Safe&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;2&nbsp;uses&nbsp;Safe&nbsp;on&nbsp;cog&nbsp;B</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;3&nbsp;uses&nbsp;Safe&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>atkAcc&nbsp;=&nbsp;50&nbsp;+&nbsp;60&nbsp;+&nbsp;(-55)&nbsp;+&nbsp;0&nbsp;=&nbsp;55</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;(atkAcc&nbsp;/&nbsp;100)&nbsp;^&nbsp;2&nbsp;=&nbsp;0.3025</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(only&nbsp;Toon&nbsp;1&nbsp;hit&nbsp;or&nbsp;only&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;(0.45&nbsp;*&nbsp;0.55)&nbsp;*&nbsp;2&nbsp;=&nbsp;0.495</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;miss)&nbsp;=&nbsp;(1&nbsp;-&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;hit))^2&nbsp;=&nbsp;0.2025</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(at&nbsp;least&nbsp;Toon&nbsp;1&nbsp;or&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;0.3025&nbsp;+&nbsp;0.495&nbsp;=&nbsp;0.7975</span></span></span></div></pre><p>You&#39;ll note that there was a 24.75% decrease (0.3025 vs. 0.55) to the odds that two Safes hit cog A compared to without an attack mismatch. However, this decrease didn&#39;t actually constitute an overall loss in expected damage: it was simply more evenly distributed. This is evident in the probability that at least one Safe hit, which was 79.75% vs. 55% <em>in favor of attack mismatches</em>. To further clarify the difference, let&#39;s take a closer look at the possible outcomes. </p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>HH&nbsp;=&nbsp;Both&nbsp;hit</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>HM&nbsp;=&nbsp;First&nbsp;hit,&nbsp;second&nbsp;miss</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>MH&nbsp;=&nbsp;First&nbsp;miss,&nbsp;second&nbsp;hit</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>MM&nbsp;=&nbsp;Both&nbsp;miss</span></span></span></div></pre><p>As you can see, there were three outcomes which resulted in damage to a cog: HH, HM and MH. However, without attack mismatches, accuracy inheritance eliminated both HM and MH. This loss of opportunity could only be offset by a large increase in the probability of HH. For instance, in the above example there&#39;s a difference of 24.75%, which was just enough to make up for the loss (see <a href="http://pastebin.com/bzugMzEs">Level 12 Big Wig; Safe + Safe</a>). Thus, the key factor was the fact that as the probability of HH increased, the difference between the probability of HH with and without attack mismatches decreased. Take, for example, maxed Storm Cloud:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;</span><span class="meta paragraph text"><span>B&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>3&nbsp;2&nbsp;1</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>atkAcc&nbsp;=&nbsp;95&nbsp;+&nbsp;60&nbsp;+&nbsp;(-55)&nbsp;+&nbsp;0&nbsp;=&nbsp;100&nbsp;(capped&nbsp;to&nbsp;95).</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>a)&nbsp;No&nbsp;mismatches</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;1&nbsp;uses&nbsp;Storm&nbsp;Cloud&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;2&nbsp;uses&nbsp;Storm&nbsp;Cloud&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;3&nbsp;uses&nbsp;Storm&nbsp;Cloud&nbsp;on&nbsp;cog&nbsp;B</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;atkAcc&nbsp;/&nbsp;100&nbsp;=&nbsp;0.95</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(only&nbsp;Toon&nbsp;1&nbsp;hit&nbsp;or&nbsp;only&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;0&nbsp;(shared&nbsp;calculation)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;miss)&nbsp;=&nbsp;1&nbsp;-&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;0.05</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(at&nbsp;least&nbsp;Toon&nbsp;1&nbsp;or&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;2&nbsp;hit)&nbsp;=&nbsp;0.95</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>b)&nbsp;Mismatches</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;1&nbsp;uses&nbsp;Storm&nbsp;Cloud&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;2&nbsp;uses&nbsp;Storm&nbsp;Cloud&nbsp;on&nbsp;cog&nbsp;B</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>-&nbsp;Toon&nbsp;3&nbsp;uses&nbsp;Storm&nbsp;Cloud&nbsp;on&nbsp;cog&nbsp;A</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;(atkAcc&nbsp;/&nbsp;100)&nbsp;^&nbsp;2&nbsp;=&nbsp;0.9025</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(only&nbsp;Toon&nbsp;1&nbsp;hit&nbsp;or&nbsp;only&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;(0.05&nbsp;*&nbsp;0.95)&nbsp;*&nbsp;2&nbsp;=&nbsp;0.095</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;miss)&nbsp;=&nbsp;(1&nbsp;-&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;hit))&nbsp;^&nbsp;2&nbsp;=&nbsp;0.0025</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>P(at&nbsp;least&nbsp;Toon&nbsp;1&nbsp;or&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;P(Toon&nbsp;1&nbsp;and&nbsp;Toon&nbsp;3&nbsp;hit)&nbsp;=&nbsp;0.9025&nbsp;+&nbsp;0.095&nbsp;=&nbsp;0.9975</span></span></span></div></pre><p>As shown above, in this case there was only a 4.75% difference in the probability of HH. You might be tempted to point out that we also only saw a 4.75% increase in P(at least Toon 1 or Toon 2 hit), which is true, but there&#39;s another factor: one hit was significantly better than no hits. Think about it in terms of the number of possible ways to defeat a cog:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Cog&nbsp;HP&nbsp;=&nbsp;200</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>a)&nbsp;No&nbsp;mismatches</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;HH&nbsp;+&nbsp;32&nbsp;=&nbsp;(80&nbsp;+&nbsp;80)&nbsp;+&nbsp;32&nbsp;=&nbsp;192&nbsp;(P&nbsp;=&nbsp;0.95)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;192&nbsp;+&nbsp;(HH&nbsp;+&nbsp;32)&nbsp;=&nbsp;384&nbsp;(P&nbsp;=&nbsp;0.9025).</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>b)&nbsp;Mismatches</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;HH&nbsp;+&nbsp;32&nbsp;=&nbsp;(80&nbsp;+&nbsp;80)&nbsp;+&nbsp;32&nbsp;=&nbsp;192&nbsp;(P&nbsp;=&nbsp;0.9025).</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;192&nbsp;+&nbsp;(HH&nbsp;+&nbsp;32)&nbsp;=&nbsp;384&nbsp;(P&nbsp;=&nbsp;0.8145)</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>OR</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;HH&nbsp;+&nbsp;32&nbsp;=&nbsp;(80&nbsp;+&nbsp;80)&nbsp;+&nbsp;32&nbsp;=&nbsp;192&nbsp;(P&nbsp;=&nbsp;0.9025).</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;192&nbsp;+&nbsp;HM&nbsp;=&nbsp;192&nbsp;+&nbsp;80&nbsp;=&nbsp;272&nbsp;(P&nbsp;=&nbsp;0.042869).</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>OR</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;HH&nbsp;+&nbsp;32&nbsp;=&nbsp;192&nbsp;(P&nbsp;=&nbsp;0.9025).</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;192&nbsp;+&nbsp;MH&nbsp;=&nbsp;192&nbsp;+&nbsp;80&nbsp;=&nbsp;272&nbsp;(P&nbsp;=&nbsp;0.042869).</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>OR</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;MH&nbsp;=&nbsp;80&nbsp;(P&nbsp;=&nbsp;0.0475).</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;80&nbsp;+&nbsp;(HH&nbsp;+&nbsp;32)&nbsp;=&nbsp;272&nbsp;(P&nbsp;=&nbsp;0.042869).</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>OR</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;HM&nbsp;=&nbsp;80&nbsp;(P&nbsp;=&nbsp;0.0475).</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;80&nbsp;+&nbsp;(HH&nbsp;+&nbsp;32)&nbsp;=&nbsp;272&nbsp;(P&nbsp;=&nbsp;0.042869).</span></span></span></div></pre><p>As you can see, attack mismatches gave us 5 ways to win vs. only 1 without them. With the above in mind, we can conclude that attack mismatches should have been preferred in any of the following scenarios.</p>
 <ul>
-<li>If either gag could defeat the given cog in one round.</li>
-<li>Assuming maxed gags, when using any combination of Throw and Squirt.</li>
+<li>If either gag was capable of defeating the given cog in one round.</li>
+<li>Assuming maxed gags, when any combination of Throw and Squirt was used.</li>
 </ul>
 <h2 id="battle-simulations">Battle Simulations</h2>
 <ul>
@@ -3498,5 +3822,6 @@ pre.editor-colors.is-focused .selection .region,
             </tr>
             </table></body>
 </html>
+
 
 
