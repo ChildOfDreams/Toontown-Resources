@@ -88,20 +88,20 @@
 .markdown-preview dl dd > :first-child, .markdown-preview[data-use-github-style] dl dd > :first-child { margin-top: 0px; }
 .markdown-preview dl dd > :last-child, .markdown-preview[data-use-github-style] dl dd > :last-child { margin-bottom: 0px; }
 .markdown-preview blockquote p, .markdown-preview[data-use-github-style] blockquote p { font-size: 16px; line-height: 1.5; }
-.markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { padding: 16px; overflow: auto; font-size: 84%; line-height: 1.45; border-radius: 3px; background-color: rgb(250, 250, 250); }
+.markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { padding: 16px; overflow: auto; font-size: 84%; line-height: 1.45; border-radius: 3px; background-color: rgb(252, 252, 252); }
 .markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { margin-bottom: 16px; word-break: normal; }
 .markdown-preview code, .markdown-preview[data-use-github-style] code, .markdown-preview tt, .markdown-preview[data-use-github-style] tt, .markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { font-family: Consolas, 'Liberation Mono', Courier, monospace; }
 .markdown-preview .emoji, .markdown-preview[data-use-github-style] .emoji { height: 20px; width: 20px; }
-.markdown-preview { font-size: 1.25em; color: rgb(66, 66, 66); background-color: rgb(255, 255, 255); }
-.markdown-preview h1, .markdown-preview h2 { color: inherit; border-color: rgb(209, 209, 209); }
+.markdown-preview { font-size: 1.25em; color: rgb(68, 68, 68); background-color: rgb(255, 255, 255); }
+.markdown-preview h1, .markdown-preview h2 { color: inherit; border-color: rgb(211, 211, 211); }
 .markdown-preview a { color: rgb(20, 146, 255); }
-.markdown-preview hr { background-color: rgb(224, 224, 224); }
-.markdown-preview blockquote { color: rgb(66, 66, 66); border-left-color: rgb(148, 148, 148); }
-.markdown-preview table th, .markdown-preview table td { border-color: rgb(209, 209, 209); }
+.markdown-preview hr { background-color: rgb(227, 227, 227); }
+.markdown-preview blockquote { color: rgb(68, 68, 68); border-left-color: rgb(150, 150, 150); }
+.markdown-preview table th, .markdown-preview table td { border-color: rgb(211, 211, 211); }
 .markdown-preview table th { background-color: rgb(255, 255, 255); }
 .markdown-preview table tr { background-color: rgb(255, 255, 255); }
 .markdown-preview table tr:nth-child(2n) { background-color: rgb(247, 247, 247); }
-.markdown-preview code { color: rgb(92, 92, 92); border-color: rgb(209, 209, 209); background-color: rgb(247, 247, 247); background-clip: padding-box; }
+.markdown-preview code { color: rgb(94, 94, 94); border-color: rgb(211, 211, 211); background-color: rgb(249, 249, 249); background-clip: padding-box; }
 .markdown-preview pre.editor-colors::shadow .line.cursor-line { background-color: transparent; }
 .bracket-matcher .region {
   border-bottom: 1px dotted lime;
@@ -114,29 +114,27 @@
 
 pre.editor-colors,
 .host {
-  background-color: #fafafa;
-  color: #575757;
+  -webkit-text-stroke: 0.1px 0.1px rgba(252, 252, 252, 0.5);
+  text-shadow: 0.2px 0.2px rgba(230, 230, 230, 0.5);
+  background-color: #fcfcfc;
+  color: #1e1e1e;
 }
 pre.editor-colors .wrap-guide,
 .host .wrap-guide {
-  background-color: #eaeaea;
+  background-color: #e6e6e6;
 }
 pre.editor-colors .indent-guide,
 .host .indent-guide {
-  color: #eaeaea;
+  color: #e6e6e6;
 }
 pre.editor-colors .invisible-character,
 .host .invisible-character {
-  color: #eaeaea;
-}
-pre.editor-colors .cursor-line,
-.host .cursor-line {
-  background-color: rgba(136, 136, 136, 0.03);
+  color: #e6e6e6;
 }
 pre.editor-colors .gutter,
 .host .gutter {
-  background-color: #fafafa;
-  color: #888888;
+  background-color: #fcfcfc;
+  color: #b9b9b9;
 }
 pre.editor-colors .gutter .line-number,
 .host .gutter .line-number {
@@ -144,12 +142,12 @@ pre.editor-colors .gutter .line-number,
 }
 pre.editor-colors .gutter .line-number.cursor-line,
 .host .gutter .line-number.cursor-line {
-  background-color: rgba(136, 136, 136, 0.03);
-  color: #676767;
+  color: #616161;
+  font-weight: bold;
 }
 pre.editor-colors .gutter .line-number.cursor-line-no-selection,
 .host .gutter .line-number.cursor-line-no-selection {
-  color: #676767;
+  color: #616161;
 }
 pre.editor-colors .gutter .line-number.folded,
 .host .gutter .line-number.folded,
@@ -157,453 +155,318 @@ pre.editor-colors .gutter .line-number:after,
 .host .gutter .line-number:after,
 pre.editor-colors .fold-marker:after,
 .host .fold-marker:after {
-  color: #c9c9c9;
+  color: #b9b9b9;
 }
 pre.editor-colors .invisible,
 .host .invisible {
-  color: #575757;
+  color: #1e1e1e;
 }
 pre.editor-colors .cursor,
 .host .cursor {
-  color: #575757;
+  color: #1e1e1e;
 }
 pre.editor-colors .selection .region,
 .host .selection .region {
-  background-color: rgba(103, 103, 103, 0.1);
+  background-color: rgba(52, 52, 52, 0.1);
 }
 pre.editor-colors::shadow .find-result .region {
-  background-color: rgba(217, 157, 98, 0.15);
-  border: 1px solid rgba(217, 157, 98, 0.6);
+  background-color: rgba(88, 156, 143, 0.15);
+  border: 1px solid rgba(88, 156, 143, 0.6);
 }
 pre.editor-colors::shadow .highlight.current-result .region,
 pre.editor-colors::shadow .highlight.current-result ~ .highlight.selection .region {
-  background-color: rgba(209, 134, 60, 0.15);
-}
-.comment {
-  color: #a8a8a8;
-}
-.entity.name.type {
-  color: #74aa74;
-}
-.entity.other.inherited-class {
-  color: #539652;
-}
-.keyword {
-  color: #85518a;
-}
-.keyword.control {
-  color: #85518a;
-}
-.keyword.operator {
-  color: #888888;
-}
-.keyword.logical {
-  color: #9c73a0;
-}
-.keyword.other.special-method {
-  color: #406d9d;
-}
-.keyword.other.unit {
-  color: #d1863c;
-}
-.storage {
-  color: #85518a;
-}
-.storage.type {
-  color: #d99d62;
-}
-.constant {
-  color: #58a8a3;
-}
-.constant.character.escape {
-  color: #58a8a3;
-}
-.constant.numeric {
-  color: #d99d62;
-}
-.constant.other.color {
-  color: #58a8a3;
-}
-.constant.other.symbol {
-  color: #9c73a0;
-}
-.variable {
-  color: #a64d4d;
-}
-.variable.interpolation {
-  color: #833d3d;
-}
-.variable.parameter.function {
-  color: #575757;
-}
-.invalid.illegal {
-  background-color: #a64d4d;
-  color: #fafafa;
-}
-.string {
-  color: #539652;
-}
-.string.regexp {
-  color: #58a8a3;
-}
-.string.regexp .source.ruby.embedded {
-  color: #d1863c;
-}
-.string.other.link {
-  color: #a64d4d;
-}
-.punctuation.definition.comment {
-  color: #888888 !important;
-}
-.punctuation.definition.string,
-.punctuation.definition.variable,
-.punctuation.definition.parameters,
-.punctuation.definition.array {
-  color: #a8a8a8;
-}
-.punctuation.definition.heading,
-.punctuation.definition.identity {
-  color: #6589b0;
-}
-.punctuation.definition.bold {
-  font-weight: bold;
-}
-.punctuation.definition.italic {
-  font-style: italic;
-}
-.punctuation.section.embedded {
-  color: #a64d4d;
-}
-.support.class {
-  color: #d99d62 !important;
-}
-.support.exception {
-  color: #a64d4d !important;
-}
-.support.function {
-  color: #406d9d !important;
-}
-.support.function.macro {
-  color: #78b8b4 !important;
-}
-.support.function.any-method {
-  color: #406d9d !important;
-}
-.entity.name.function {
-  color: #406d9d;
-}
-.entity.name.class,
-.entity.name.type.class {
-  color: #d99d62;
-}
-.entity.name.section {
-  color: #406d9d;
-}
-.entity.name.tag {
-  color: #a64d4d;
-}
-.entity.other.attribute-name {
-  color: #539652;
-}
-.entity.other.attribute-name.id {
-  color: #406d9d;
-}
-.meta.class {
-  color: #d99d62;
-}
-.meta.link {
-  color: #d1863c;
-}
-.meta.require {
-  color: #406d9d;
-}
-.meta.selector {
-  color: #85518a;
-}
-.meta.separator {
-  background-color: #a8a8a8;
-  color: #575757;
-}
-.none {
-  color: #575757;
-}
-.markup.bold {
-  color: #d1863c;
-  font-weight: bold;
-}
-.markup.changed {
-  color: #85518a;
-}
-.markup.deleted {
-  color: #a64d4d;
-}
-.markup.italic {
-  color: #85518a;
-  font-style: italic;
-}
-.markup.heading .punctuation.definition.heading {
-  color: #406d9d;
-}
-.markup.inserted {
-  color: #539652;
-}
-.markup.list {
-  color: #a64d4d;
-}
-.markup.quote {
-  color: #d1863c;
-}
-.markup.raw.inline {
-  color: #539652;
-}
-.source.gfm .markup {
-  -webkit-font-smoothing: auto;
-}
-.source.gfm .markup.heading {
-  color: #539652;
+  background-color: rgba(59, 139, 124, 0.15);
 }
 pre.editor-colors[mini] .scroll-view,
 .host([mini]) .scroll-view {
   padding-left: 1px;
 }
+.punctuation {
+  color: #b9b9b9;
+}
+.comment {
+  color: #616161;
+}
+.comment.punctuation {
+  color: #b9b9b9;
+}
+.meta {
+  color: #1e1e1e;
+}
+.none {
+  color: #b9b9b9;
+}
+.string {
+  color: #35905a;
+}
+.constant {
+  color: #53a072;
+}
+.constant.numeric {
+  color: #589c8f;
+}
+.storage {
+  color: #995b78;
+}
+.entity {
+  color: #3b7891;
+}
+.keyword {
+  color: #873e61;
+}
+.keyword.operator {
+  color: #616161;
+}
+.variable {
+  color: #7c7792;
+}
+.support {
+  color: #665f7f;
+}
 .link {
-  color: #888888 !important;
+  color: #616161 !important;
 }
 .http,
 .hyperlink {
-  border-bottom: 1px dashed #406d9d;
-}
-.punctuation {
-  color: #a8a8a8 !important;
+  border-bottom: 1px dashed #588ca1;
 }
 .brace {
-  color: #c9c9c9 !important;
+  color: #b9b9b9 !important;
 }
 .brace .curly,
 .brace .square {
-  color: #c9c9c9 !important;
+  color: #b9b9b9 !important;
 }
 .cursor-line {
   z-index: -100 !important;
 }
-.source.gfm .markup {
+.line-number {
+  opacity: 0.9;
+}
+.source.gfm {
   -webkit-font-smoothing: auto;
 }
+.source.gfm .markup.italic {
+  font-style: italic;
+  color: #588ca1;
+}
+.source.gfm .markup.bold {
+  font-weight: bold;
+  color: #3b7891;
+}
 .source.gfm .markup.heading {
-  color: #c9c9c9;
+  color: #343434;
+  font-weight: bold;
 }
 .source.gfm .markup.heading.space,
 .source.gfm .markup.heading.marker {
-  text-decoration: none !important;
-  display: inline-block;
-  font-style: normal !important;
+  font-weight: normal;
 }
-.source.gfm .markup.heading-1 {
-  color: #676767;
-  font-weight: bold;
-}
-.source.gfm .markup.heading-2 {
-  color: #888888;
-  font-weight: bold;
-}
-.source.gfm .markup.heading-3 {
-  color: #888888;
-}
-.source.gfm .markup.heading-4 {
-  color: #a8a8a8;
-}
-.source.gfm .markup.heading-5 {
-  color: #c9c9c9;
-}
-.source.gfm .markup.heading-6 {
-  color: #c9c9c9;
-  font-size: italic;
-}
-.source.gfm .markup.marker {
-  color: #74aa74 !important;
-  font-weight: normal !important;
-}
-.source.gfm .bold,
-.source.gfm .italic {
-  color: #575757;
+.source.gfm .markup.heading.marker {
+  color: #35905a;
 }
 .source.gfm .hr {
   font-weight: bold;
-  color: #c9c9c9;
+  color: #b9b9b9;
 }
 .source.gfm .list {
-  color: #539652;
+  color: #3b8b7c;
 }
 .source.gfm .quote {
-  color: #888888;
+  color: #616161;
 }
 .source.gfm .quote.support {
   font-weight: bold;
+  color: #3b8b7c;
+}
+.source.gfm .mention {
+  color: #8d8d8d;
+}
+.source.gfm .username {
+  color: #873e61;
 }
 .source.gfm .raw {
-  color: #888888;
+  color: #616161;
   border-radius: 3px;
-  background-color: #eaeaea;
+  background-color: #e6e6e6;
 }
 .source.gfm .link .entity {
-  color: #539652;
+  color: #995b78;
 }
 .source.gfm .link .underline {
   text-decoration: none;
-  border-bottom: 1px dashed #406d9d;
+  border-bottom: 1px dashed #588ca1;
 }
 .source.gfm .link .punctuation {
-  color: #a8a8a8;
+  color: #8d8d8d;
   text-decoration: none !important;
 }
-.source.gfm .support {
-  color: #539652;
-}
-.source.gfm .mention {
-  color: #a8a8a8;
-}
-.source.gfm .username {
-  color: #d1863c;
-}
 .source.gfm .table.gfm .border {
-  color: #a8a8a8;
+  color: #8d8d8d;
   font-weight: bold;
 }
 .source.gfm .table.gfm .border.outer {
-  color: #888888;
+  color: #616161;
 }
 .source.gfm .table.gfm .border.header {
-  color: #eaeaea;
+  color: #e6e6e6;
 }
 .source.gfm .table.gfm .alignment {
-  color: #c9c9c9;
+  color: #b9b9b9;
 }
-.source.gfm > .critic.gfm.addition {
-  color: #539652;
+.critic.gfm.addition {
+  color: #35905a;
 }
-.source.gfm > .critic.gfm.deletion {
-  color: #a64d4d;
+.critic.gfm.deletion {
+  color: #665f7f;
 }
-.source.gfm > .critic.gfm.substitution {
-  color: #85518a;
+.critic.gfm.substitution {
+  color: #3b7891;
 }
-.source.gfm > .critic.gfm.comment {
-  color: #406d9d;
+.critic.gfm.comment {
+  color: #3b8b7c;
 }
-.source.gfm > .critic.gfm.highlight {
-  color: #d1863c;
+.critic.gfm.highlight {
+  color: #589c8f;
 }
-.source.gfm > .critic.gfm .marker {
-  color: #c9c9c9 !important;
+.critic.gfm.marker {
+  color: #b9b9b9 !important;
 }
-.source.gfm > .critic.gfm .operator {
-  color: #c9c9c9 !important;
+.critic.gfm.operator {
+  color: #b9b9b9 !important;
+}
+.md .heading {
+  color: #343434;
+  font-weight: bold;
+}
+.md .heading .punctuation {
+  font-weight: normal !important;
+  color: #35905a !important;
+}
+.md .list .punctuation,
+.md .quote .punctuation {
+  color: #35905a !important;
+}
+.md .table {
+  color: #1e1e1e;
+}
+.md .table .alignment {
+  color: #35905a !important;
+  font-weight: bold;
+}
+.md .emphasis {
+  color: #665f7f;
+}
+.md .emphasis.italic {
+  font-style: italic;
+}
+.md .emphasis.bold {
+  font-weight: bold;
+}
+.md .reference {
+  color: #3b7891 !important;
+  font-weight: bold;
+}
+.md .fenced {
+  color: #343434;
+}
+.md .raw {
+  color: #3b8b7c;
+}
+.md .link .text,
+.md .link .string {
+  color: #3b7891 !important;
+}
+.md .link .label,
+.md .link .destination {
+  color: #588ca1 !important;
+  font-weight: normal !important;
+}
+.md .image .punctuation::first-letter {
+  color: #35905a !important;
+}
+.md .critic.changed {
+  background: none !important;
+  color: #3b8b7c !important;
+}
+.md .critic.inserted {
+  color: #35905a !important;
+}
+.md .critic.deleted {
+  color: #665f7f !important;
+}
+.md .critic.comment {
+  color: #3b7891 !important;
 }
 .source .meta.diff.header.from-file {
-  color: #a64d4d;
+  color: #665f7f;
 }
 .source .meta.diff.header.to-file {
-  color: #406d9d;
+  color: #3b8b7c;
 }
 .source .meta.diff.range {
-  color: #eaeaea !important;
+  color: #e6e6e6 !important;
 }
 .source .meta.diff.line-number {
-  color: #676767 !important;
+  color: #343434 !important;
   font-weight: bold;
 }
 .source .diff.deleted {
-  color: #a64d4d !important;
+  color: #665f7f !important;
   text-decoration: line-through;
 }
 .source .diff.inserted {
-  color: #539652 !important;
+  color: #35905a !important;
   text-decoration: underline;
 }
-.indent-guide-improved {
-  width: 1px;
-  z-index: 1;
-  position: absolute;
+.gutter .git-line-removed::before {
+  border-left-color: #665f7f !important;
 }
-.indent-guide-improved {
-  background-color: #eaeaea;
-}
-.indent-guide-improved.indent-guide-stack {
-  background-color: #eaeaea;
-}
-.indent-guide-improved.indent-guide-stack.indent-guide-active {
-  background-color: #c9c9c9;
-}
-.gutter .git-line-added {
-  color: #539652;
-}
-.gutter .git-line-added.cursor-line {
-  color: #539652;
-}
-.gutter .git-line-modified {
-  color: #406d9d;
-}
-.gutter .git-line-modified.cursor-line {
-  color: #406d9d;
-}
-.gutter .git-line-removed {
-  border-bottom: 1px dotted #a64d4d;
+.gutter .line-number.git-line-added,
+.gutter .line-number.git-line-modified {
+  border-left-width: 2px !important;
+  padding-left: calc(-1.5em) !important;
 }
 .git-config .constant {
-  color: #d1863c;
+  color: #3b7891;
 }
 .git-config .boolean {
-  color: #85518a;
+  color: #35905a;
 }
 .git-config .name.section {
-  color: #58a8a3;
+  color: #873e61;
 }
 .git-config .name.subsection {
-  color: #539652;
+  color: #995b78;
 }
 .list-tree .status-modified,
 .tree-view-directory .status-modified {
-  color: #406d9d !important;
+  color: #3b8b7c !important;
 }
 .list-tree .status-added,
 .tree-view-directory .status-added {
-  color: #539652 !important;
+  color: #35905a !important;
 }
 .list-tree li.list-nested-item.selected.status-modified > .list-item,
 .list-tree li.list-nested-item.status-modified > .list-item {
-  color: #406d9d !important;
+  color: #3b8b7c !important;
 }
 .source.coffee .punctuation,
 .source.json .punctuation,
 .source.yaml .punctuation {
-  color: #c9c9c9 !important;
+  color: #b9b9b9 !important;
 }
 .source.json .dictionary .value .string {
-  color: #406d9d;
+  color: #3b7891;
 }
 .source.yaml .tag {
-  color: #539652 !important;
+  color: #3b8b7c !important;
 }
 .source.yaml .string.unquoted {
-  color: #406d9d;
+  color: #665f7f;
 }
 .source.coffee .assignment {
-  color: #85518a !important;
-}
-.source.python .class {
-  color: #406d9d;
-}
-.source.python .class .inherited-class {
-  color: #a64d4d;
-}
-.source.python .function {
-  color: #85518a;
-}
-.source.python .function .name {
-  color: #6589b0;
-}
-.source.python .parameters .parameter {
-  color: #575757;
+  color: #873e61 !important;
 }
 .todo,
 .fixme,
@@ -613,8 +476,8 @@ pre.editor-colors[mini] .scroll-view,
 .hack,
 .idea,
 .review {
-  background-color: #eaeaea !important;
-  color: #575757 !important;
+  background-color: #e6e6e6;
+  color: #873e61;
   padding: 0px 1px;
   margin: 0px -1px;
   border-radius: 3px;
@@ -622,47 +485,64 @@ pre.editor-colors[mini] .scroll-view,
 }
 .todo,
 .fixme {
-  color: #74aa74 !important;
+  color: #35905a !important;
 }
 .changed,
 .review {
-  color: #6589b0 !important;
+  color: #3b8b7c !important;
 }
 .note,
 .idea {
-  color: #d99d62 !important;
+  color: #3b7891 !important;
 }
 .hack {
-  color: #b77070 !important;
+  color: #665f7f !important;
+}
+.spell-check-misspelling .region {
+  border-bottom: 1px dotted #7c7792;
+}
+.guter .custom-decorations {
+  background-color: none !important;
+}
+.indent-guide-improved {
+  width: 1px;
+  z-index: 1;
+  position: absolute;
+}
+.indent-guide-improved {
+  background-color: #e6e6e6;
+}
+.indent-guide-improved.indent-guide-stack {
+  background-color: #e6e6e6;
+}
+.indent-guide-improved.indent-guide-stack.indent-guide-active {
+  background-color: #b9b9b9;
 }
 .source.todo {
   background: none !important;
   border: none !important;
 }
 .source.todo .header {
-  color: #676767 !important;
+  color: #343434 !important;
 }
 .source.todo .header .header-title {
-  color: #539652;
+  color: #589c8f;
   font-weight: bold;
 }
 .source.todo .tasks {
-  color: #575757;
+  color: #1e1e1e;
 }
 .source.todo .tasks .marker {
-  color: #888888 !important;
+  color: #616161 !important;
 }
 .source.todo .attribute {
-  color: #c9c9c9;
+  color: #b9b9b9;
 }
 .source.todo .attribute-value {
-  color: #888888;
+  color: #616161;
 }
 .source.todo .attribute-name {
-  color: #406d9d;
-}
-.spell-check-misspelling .region {
-  border-bottom: 1px dotted #a64d4d;
+  color: #7c7792;
 }
 </style>
   </head>
@@ -760,6 +640,7 @@ pre.editor-colors[mini] .scroll-view,
 <li><a href="#atk-acc-boss">Bossbots</a></li>
 </ul>
 </li>
+<li><a href="#appendix-d">Appendix D: SOS Toons</a></li>
 </ul>
 <h1 id="introduction-a-name-intro-a-">Introduction <a name="intro"></a></h1>
 <h2 id="goals">Goals</h2>
@@ -830,7 +711,7 @@ pre.editor-colors[mini] .scroll-view,
     <td align="center">60</td>
     <td align="center">70</td>
     <td align="center">70</td>
-    <td align="center">100</td>
+    <td align="center">90</td>
   </tr>
   <tr>
     <td colspan="2" align="center">Sound</td>
@@ -979,10 +860,10 @@ pre.editor-colors[mini] .scroll-view,
 <ul>
 <li>Finally, <code style="font-family: Menlo;">damage</code>:</li>
 </ul>
-<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>damage</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="meta function-call generic python"><span>floor</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>(</span><span>expVal</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span>minE</span><span>)</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>/</span></span><span>&nbsp;</span><span>expPerHp</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>+</span></span><span>&nbsp;</span><span>minD</span></span></div></pre>
+<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>damage</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span>floor</span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>(</span><span>expVal</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span>minE</span><span>)</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>/</span></span><span>&nbsp;</span><span>expPerHp</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>+</span></span><span>&nbsp;</span><span>minD</span></span></div></pre>
 <h2 id="-hpbonus-"><code style="font-family: Menlo;">hpBonus</code></h2>
 <p><code style="font-family: Menlo;">hpBonus</code> applied in any case where multiple gags of the same track were used in the same round, on the same target. It was calculated as follows.</p>
-<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>hpBonus</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="meta function-call generic python"><span>ceil</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>totalDmgs</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span class="constant numeric float python"><span>0.20</span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div></pre>
+<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>hpBonus</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span>ceil</span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>totalDmgs</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span class="constant numeric float python"><span>0.20</span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div></pre>
 <p>(<a href="https://docs.python.org/2/library/math.html#math.ceil">See definition of <code style="font-family: Menlo;">ceil</code> here</a>)</p>
 <p>Where <code style="font-family: Menlo;">totalDmgs</code> represented the total amount of damage done by the particular track, on the particular target.</p>
 <p><code style="font-family: Menlo;">hpBonus</code> did not apply to Lure or Trap gags.</p>
@@ -1141,7 +1022,7 @@ pre.editor-colors[mini] .scroll-view,
 </tbody>
 </table>
 <p>Based on the above table, it&#39;s possible to quantitatively compare the effectiveness of each trick. Consider the following:</p>
-<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Expected&nbsp;Laff&nbsp;=&nbsp;cutoff&nbsp;*&nbsp;Laff&nbsp;Given</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.970&nbsp;*&nbsp;10&nbsp;=&nbsp;9.7000&nbsp;Laff&nbsp;(Jump)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.873&nbsp;*&nbsp;12&nbsp;=&nbsp;10.476&nbsp;Laff&nbsp;(Beg)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.776&nbsp;*&nbsp;14&nbsp;=&nbsp;10.864&nbsp;Laff&nbsp;(Play&nbsp;Dead)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.679&nbsp;*&nbsp;16&nbsp;=&nbsp;10.864&nbsp;Laff&nbsp;(Rollover)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.582&nbsp;*&nbsp;18&nbsp;=&nbsp;10.476&nbsp;Laff&nbsp;(Backflip)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.485&nbsp;*&nbsp;20&nbsp;=&nbsp;9.7000&nbsp;Laff&nbsp;(Dance)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.388&nbsp;*&nbsp;22&nbsp;=&nbsp;8.5360&nbsp;Laff&nbsp;(Speak)</span></span></span></div></pre><p>As you can see, maxed Play Dead and Rollover were the most efficient tricks. Therefore, Play Dead was likely the only trick worth training since it maximized the work-reward ratio.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Expected&nbsp;Laff&nbsp;=&nbsp;cutoff&nbsp;*&nbsp;Laff&nbsp;Given</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.970&nbsp;*&nbsp;10&nbsp;=&nbsp;9.7000&nbsp;Laff&nbsp;(Jump)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.873&nbsp;*&nbsp;12&nbsp;=&nbsp;10.476&nbsp;Laff&nbsp;(Beg)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.776&nbsp;*&nbsp;14&nbsp;=&nbsp;10.864&nbsp;Laff&nbsp;(Play&nbsp;Dead)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.679&nbsp;*&nbsp;16&nbsp;=&nbsp;10.864&nbsp;Laff&nbsp;(Rollover)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.582&nbsp;*&nbsp;18&nbsp;=&nbsp;10.476&nbsp;Laff&nbsp;(Backflip)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.485&nbsp;*&nbsp;20&nbsp;=&nbsp;9.7000&nbsp;Laff&nbsp;(Dance)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0.388&nbsp;*&nbsp;22&nbsp;=&nbsp;8.5360&nbsp;Laff&nbsp;(Speak)</span></span></span></div></pre><p>As you can see, maxed Play Dead and Rollover were the most efficient tricks. Therefore Play Dead was likely the only trick worth training, since it maximized the work-reward ratio.</p>
 <h2 id="fishing-a-name-fishing-main-a-">Fishing <a name="fishing-main"></a></h2>
 <p>[<a href="#contents">back to top</a>]</p>
 <h3 id="-itemtype-"><code style="font-family: Menlo;">itemType</code></h3>
@@ -1150,7 +1031,7 @@ pre.editor-colors[mini] .scroll-view,
 <p><code style="font-family: Menlo;">QuestItem</code> served two purposes:</p>
 <ul>
 <li><p>If there was an active Fishing quest, the following calculation was done to determine if the quest item would be found:</p>
-<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>&nbsp;</span><span>questItemFound</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant language python"><span>False</span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span>minChance</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>questClass.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>getPercentChance</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>&nbsp;</span><span class="comment line number-sign python"><span class="punctuation definition comment python"><span>#</span></span><span>&nbsp;Quest&nbsp;rarity&nbsp;%</span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span>chance</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>random.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>randint</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>minChance</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>40</span></span><span>,&nbsp;</span><span class="constant numeric integer decimal python"><span>100</span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span class="keyword control flow python"><span>if</span></span><span>&nbsp;</span><span>chance</span><span>&nbsp;</span><span class="keyword operator comparison python"><span>&lt;=</span></span><span>&nbsp;</span><span>minChance</span><span>:</span></span></div><div class="line"><span class="source python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>questItemFound</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant language python"><span>True</span></span></span></div></pre>
+<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>&nbsp;</span><span>questItemFound</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant language python"><span>False</span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span>minChance</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span>questClass</span><span>.</span><span>getPercentChance</span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>&nbsp;</span><span class="comment line number-sign python"><span class="punctuation definition comment python"><span>#</span></span><span>&nbsp;Quest&nbsp;rarity&nbsp;%</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span>chance</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span>random</span><span>.</span><span>randint</span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>minChance</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>40</span></span><span>,&nbsp;</span><span class="constant numeric integer decimal python"><span>100</span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>&nbsp;</span><span class="keyword control conditional python"><span>if</span></span><span>&nbsp;</span><span>chance</span><span>&nbsp;</span><span class="keyword operator comparison python"><span>&lt;=</span></span><span>&nbsp;</span><span>minChance</span><span>:</span></span></div><div class="line"><span class="source python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>questItemFound</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant language python"><span>True</span></span></span></div></pre>
 </li>
 <li>If there was not an active Fishing quest or the quest item was not found,  <code style="font-family: Menlo;">QuestItem</code> used the same process as <code style="font-family: Menlo;">FishItem</code> (see next section).</li>
 </ul>
@@ -1159,7 +1040,7 @@ pre.editor-colors[mini] .scroll-view,
 <ul>
 <li><code style="font-family: Menlo;">rarity</code>:</li>
 </ul>
-<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>rarity</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>int</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span class="meta function-call python"><span class="meta function-call generic python"><span>ceil</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span class="constant numeric integer decimal python"><span>10</span></span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span>(</span><span class="constant numeric integer decimal python"><span>1</span></span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>pow</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>diceRoll</span><span>,&nbsp;</span><span>RodRarityFactor</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>)</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span class="keyword control flow python"><span>if</span></span><span>&nbsp;</span><span>rarity</span><span>&nbsp;</span><span class="keyword operator comparison python"><span>&lt;=</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>0</span></span><span>:</span></span></div><div class="line"><span class="source python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>rarity</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>1</span></span></span></div></pre>
+<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>rarity</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>int</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span class="meta function-call python"><span>ceil</span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span class="constant numeric integer decimal python"><span>10</span></span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span>(</span><span class="constant numeric integer decimal python"><span>1</span></span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>pow</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>diceRoll</span><span>,&nbsp;</span><span>RodRarityFactor</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>)</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span class="keyword control conditional python"><span>if</span></span><span>&nbsp;</span><span>rarity</span><span>&nbsp;</span><span class="keyword operator comparison python"><span>&lt;=</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>0</span></span><span>:</span></span></div><div class="line"><span class="source python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>rarity</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>1</span></span></span></div></pre>
 <p>Where <code style="font-family: Menlo;">diceRoll</code> was a pseudorandom real number such that 0.0 &lt;= <code style="font-family: Menlo;">diceRoll</code> &lt; 1.0 and <code style="font-family: Menlo;">RodRarityFactor</code> was given by the following table.</p>
 <table>
 <thead>
@@ -1196,7 +1077,7 @@ pre.editor-colors[mini] .scroll-view,
 </ul>
 <p>After the calculation of <code style="font-family: Menlo;">rarity</code>, the possible fish were narrowed by pond location and rod used. Then, the possible fish were further subdivided into multiple <code style="font-family: Menlo;">fishList</code>s, each associated with a particular <code style="font-family: Menlo;">rarity</code> value. All possible combinations can be <a href="http://pastebin.com/as4BKA3E">seen here</a>. </p>
 <p>After selecting a genus and species, the fish&#39;s weight was calculated according to the following process:</p>
-<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>minWeight</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>max</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>minFishWeight</span><span>,&nbsp;</span><span>minRodWeight</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>maxWeight</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>min</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>maxFishWeight</span><span>,&nbsp;</span><span>maxRodWeight</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>randNumA</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>random.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>random</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>&nbsp;</span><span class="comment line number-sign python"><span class="punctuation definition comment python"><span>#</span></span><span>&nbsp;A&nbsp;real&nbsp;number&nbsp;between&nbsp;0.0&nbsp;and&nbsp;1.0</span></span></span></div><div class="line"><span class="source python"><span>randNumB</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>random.</span><span class="meta function-call python"><span class="meta function-call generic python"><span>random</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>&nbsp;</span><span class="comment line number-sign python"><span class="punctuation definition comment python"><span>#</span></span><span>&nbsp;A&nbsp;real&nbsp;number&nbsp;between&nbsp;0.0&nbsp;and&nbsp;1.0</span></span></span></div><div class="line"><span class="source python"><span>randNum</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>(</span><span>randNumA</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>+</span></span><span>&nbsp;</span><span>randNumB</span><span>)</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>/</span></span><span>&nbsp;</span><span class="constant numeric float python"><span>2.0</span></span></span></div><div class="line"><span class="source python"><span>randWeight</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>minWeight</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>+</span></span><span>&nbsp;</span><span>(</span><span>maxWeight</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span>minWeight</span><span>)</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span>randNum</span></span></div><div class="line"><span class="source python"><span>randWeight</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>int</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span class="meta function-call python"><span class="support function builtin python"><span>round</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>randWeight</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>16</span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div></pre>
+<pre class="editor-colors lang-python"><div class="line"><span class="source python"><span>minWeight</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>max</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>minFishWeight</span><span>,&nbsp;</span><span>minRodWeight</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>maxWeight</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>min</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>maxFishWeight</span><span>,&nbsp;</span><span>maxRodWeight</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div><div class="line"><span class="source python"><span>randNumA</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span>random</span><span>.</span><span>random</span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>&nbsp;</span><span class="comment line number-sign python"><span class="punctuation definition comment python"><span>#</span></span><span>&nbsp;A&nbsp;real&nbsp;number&nbsp;between&nbsp;0.0&nbsp;and&nbsp;1.0</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source python"><span>randNumB</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span>random</span><span>.</span><span>random</span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="punctuation definition arguments end python"><span>)</span></span></span><span>&nbsp;</span><span class="comment line number-sign python"><span class="punctuation definition comment python"><span>#</span></span><span>&nbsp;A&nbsp;real&nbsp;number&nbsp;between&nbsp;0.0&nbsp;and&nbsp;1.0</span><span>&nbsp;</span></span></span></div><div class="line"><span class="source python"><span>randNum</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>(</span><span>randNumA</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>+</span></span><span>&nbsp;</span><span>randNumB</span><span>)</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>/</span></span><span>&nbsp;</span><span class="constant numeric float python"><span>2.0</span></span></span></div><div class="line"><span class="source python"><span>randWeight</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span>minWeight</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>+</span></span><span>&nbsp;</span><span>(</span><span>maxWeight</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>-</span></span><span>&nbsp;</span><span>minWeight</span><span>)</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span>randNum</span></span></div><div class="line"><span class="source python"><span>randWeight</span><span>&nbsp;</span><span class="keyword operator assignment python"><span>=</span></span><span>&nbsp;</span><span class="meta function-call python"><span class="support function builtin python"><span>int</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span class="meta function-call python"><span class="support function builtin python"><span>round</span></span><span class="punctuation definition arguments begin python"><span>(</span></span><span class="meta function-call arguments python"><span>randWeight</span><span>&nbsp;</span><span class="keyword operator arithmetic python"><span>*</span></span><span>&nbsp;</span><span class="constant numeric integer decimal python"><span>16</span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span><span class="punctuation definition arguments end python"><span>)</span></span></span></span></div></pre>
 <p>If no <code style="font-family: Menlo;">fishList</code> was associated with the calculated <code style="font-family: Menlo;">rarity</code> value, a Balloon Fish weighing 0lbs was caught.</p>
 <h3 id="-jellybeanitem-"><code style="font-family: Menlo;">JellybeanItem</code></h3>
 <p>In this case, Jellybeans were awarded according to the following table.</p>
@@ -1361,6 +1242,7 @@ pre.editor-colors[mini] .scroll-view,
 </ul>
 <h2 id="how-were-the-sos-toons-chosen-a-name-vp-7-a-">How were the SOS toons chosen?  <a name="vp-7"></a></h2>
 <p>Upon entering the elevator, the game would return a list of all VP SOS toons via the .keys() method. The game would then use <code style="font-family: Menlo;">random.choice</code> to pick an SOS from that list. In other words, the stars on the SOS card would not affect the chances of it being selected.</p>
+<p>A list of all SOS toons obtained in both the VP and Field Offices can be seen <a href="#appendix-d">here</a>.</p>
 <h1 id="c-f-o-a-name-cfo-a-">C.F.O. <a name="cfo"></a></h1>
 <p>[<a href="#contents">back to top</a>]</p>
 <h2 id="how-was-the-c-f-o-reward-chosen-a-name-cfo-1-a-">How was the C.F.O. reward chosen? <a name="cfo-1"></a></h2>
@@ -5946,8 +5828,202 @@ pre.editor-colors[mini] .scroll-view,
         </tr>
 </table>
 
-<p>* The Big Cheese was coded with three unused attacks. They were CigarSmoke, FloodTheMarket and SongAnd Dance. However, when the game selected one of these attacks, The Big Cheese would instead use his programmed default attack, which was Glower Power. Despite this, the game would still use the accuracy and damage values of the move that was internally selected (see <a href="#cog-atk-acc">Cog Attack Accuracy</a> for more information), thus allowing Glower Power to have varying damage and accuracy values for the same level.</p></body>
+<p>* The Big Cheese was coded with three unused attacks. They were CigarSmoke, FloodTheMarket and SongAnd Dance. However, when the game selected one of these attacks, The Big Cheese would instead use his programmed default attack, which was Glower Power. Despite this, the game would still use the accuracy and damage values of the move that was internally selected (see <a href="#cog-atk-acc">Cog Attack Accuracy</a> for more information), thus allowing Glower Power to have varying damage and accuracy values for the same level.</p>
+<h1 id="appendix-d-sos-toons-a-name-appendix-d-a-">Appendix D: SOS Toons <a name="appendix-d"></a></h1>
+<table>
+<tr>
+            <th colspan="4"> </th>
+        </tr>
+        <tr>
+            <th>NPC</th>
+            <th>Track</th>
+            <th>Stars</th>
+            <th>Effect</th>
+        </tr>
+        <tr>
+            <td align="center">Flippy</td>
+            <td align="center">Toon-up</td>
+            <td align="center">★★★★★</td>
+            <td align="center">Healed 136 laff / # of total active toons</td>
+        </tr>
+        <tr>
+            <td align="center">Daffy Don</td>
+            <td align="center">Toon-up</td>
+            <td align="center">★★★★</td>
+            <td align="center">Healed 70 laff / # of total active toons</td>
+        </tr>
+        <tr>
+            <td align="center">Madame Chuckle</td>
+            <td align="center">Toon-up</td>
+            <td align="center">★★★</td>
+            <td align="center">Healed 45 laff / # of total active toons</td>
+        </tr>
+        <tr>
+            <td align="center">Gigglemesh <em></em></td>
+            <td align="center">Toon-up</td>
+            <td align="center">★★</td>
+            <td align="center">Healed 30 laff / # of total active toons</td>
+        </tr>
+        <tr>
+            <td align="center">Emma Phatic </td>
+            <td align="center">Toon-up</td>
+            <td align="center">★</td>
+            <td align="center">Healed 20 laff / # of total active toons</td>
+        </tr>
+        <tr>
+            <td align="center">Phil Bettur <em></em></td>
+            <td align="center">Toon-up</td>
+            <td align="center"></td>
+            <td align="center">Healed 10 laff / # of total active toons</td>
+        </tr>
+
+        <th colspan="4"> </th>
+
+        <tr>
+            <td align="center">Clerk Clara</td>
+            <td align="center">Trap</td>
+            <td align="center">★★★★★</td>
+            <td align="center">Did 180 damage to lured cogs</td>
+        </tr>
+        <tr>
+            <td align="center">Clerk Penny</td>
+            <td align="center">Trap</td>
+            <td align="center">★★★★</td>
+            <td align="center">Did 70 damage to lured cogs</td>
+        </tr>
+        <tr>
+            <td align="center">Clerk Will</td>
+            <td align="center">Trap</td>
+            <td align="center">★★★</td>
+            <td align="center">Did 50 damage to lured cogs</td>
+        </tr>
+
+            <th colspan="4"> </th>
+
+        <tr>
+            <td align="center">Lil Oldman</td>
+            <td align="center">Lure</td>
+            <td align="center">★★★★★</td>
+            <td align="center">Lured cogs for a maximum of 4 rounds</td>
+        </tr>
+        <tr>
+            <td align="center">Stinky Ned</td>
+            <td align="center">Lure</td>
+            <td align="center">★★★</td>
+            <td align="center">Lured cogs for a maximum of 4 rounds</td>
+        </tr>
+        <tr>
+            <td align="center">Nancy Gas</td>
+            <td align="center">Lure</td>
+            <td align="center">★★★</td>
+            <td align="center">Lured cogs for a maximum of 4 rounds</td>
+        </tr>
+        <tr>
+            <td align="center">Bo Nanapeel </td>
+            <td align="center">Lure</td>
+            <td align="center">★★</td>
+            <td align="center">Lured cogs for a maximum of 3 rounds</td>
+        </tr>
+        <tr>
+            <td align="center">Dee Version <em></em></td>
+            <td align="center">Lure</td>
+            <td align="center">★</td>
+            <td align="center">Lured cogs for a maximum of 2 rounds</td>
+        </tr>
+        <tr>
+            <td align="center">Des Traction </td>
+            <td align="center">Lure</td>
+            <td align="center"></td>
+            <td align="center">Lured cogs for a maximum of 2 rounds</td>
+        </tr>
+
+        <th colspan="4"> </th>
+
+        <tr>
+            <td align="center">Moe Zart</td>
+            <td align="center">Sound</td>
+            <td align="center">★★★★★</td>
+            <td align="center">Did 80 damage to all cogs</td>
+        </tr>
+        <tr>
+            <td align="center">Sid Sonata</td>
+            <td align="center">Sound</td>
+            <td align="center">★★★★</td>
+            <td align="center">Did 50 damage to all cogs</td>
+        </tr>
+        <tr>
+            <td align="center">Barbara Seville</td>
+            <td align="center">Sound</td>
+            <td align="center">★★★</td>
+            <td align="center">Did 40 damage to all cogs</td>
+        </tr>
+        <tr>
+            <td align="center">Al Capella <em></em></td>
+            <td align="center">Sound</td>
+            <td align="center">★★</td>
+            <td align="center">Did 30 damage to all cogs</td>
+        </tr>
+        <tr>
+            <td align="center">Otto Toon </td>
+            <td align="center">Sound</td>
+            <td align="center">★</td>
+            <td align="center">Did 20 damage to all cogs</td>
+        </tr>
+        <tr>
+            <td align="center">Bea Sharpe <em></em></td>
+            <td align="center">Sound</td>
+            <td align="center"></td>
+            <td align="center">Did 10 damage to all cogs</td>
+        </tr>
+
+        <th colspan="4"> </th>
+
+        <tr>
+            <td align="center">Barnacle Bessie</td>
+            <td align="center">Drop</td>
+            <td align="center">★★★★★</td>
+            <td align="center">Did 170 damage to all unlured cogs</td>
+        </tr>
+        <tr>
+            <td align="center">Franz Neckvein</td>
+            <td align="center">Drop</td>
+            <td align="center">★★★★</td>
+            <td align="center">Did 100 damage to all unlured cogs</td>
+        </tr>
+        <tr>
+            <td align="center">Clumsy Ned</td>
+            <td align="center">Drop</td>
+            <td align="center">★★★</td>
+            <td align="center">Did 60 damage to all unlured cogs</td>
+        </tr>
+        <tr>
+            <td align="center">J.S. Bark </td>
+            <td align="center">Drop</td>
+            <td align="center">★★</td>
+            <td align="center">Did 50 damage to all unlured cogs</td>
+        </tr>
+        <tr>
+            <td align="center">Bud Erfingerz <em></em></td>
+            <td align="center">Drop</td>
+            <td align="center">★</td>
+            <td align="center">Did 35 damage to all unlured cogs</td>
+        </tr>
+        <tr>
+            <td align="center">Anne Ville </td>
+            <td align="center">Drop</td>
+            <td align="center"></td>
+            <td align="center">Did 20 damage to all unlured cogs</td>
+        </tr>
+</table>
+
+<ul>
+<li><ul>
+<li>= This card was obtainable via Field Offices.</li>
+</ul>
+</li>
+</ul></body>
 </html>
+
 
 
 
