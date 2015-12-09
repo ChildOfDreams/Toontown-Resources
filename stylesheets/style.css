@@ -1,0 +1,214 @@
+.table td, th, tr {
+   text-align: center;
+}
+body {
+    min-height: 2000px;
+}
+section {
+    margin-top: 40px;
+}
+section:first-of-type {
+    margin-top: 0;
+}
+li a {
+    transition-duration: 1s;
+}
+pre {
+    margin: 15px 0 15px 0 !important;
+}
+.text-p, th, td, tr {
+    font-size: 18px;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 70px;
+  background-color: #494949;
+}
+
+.footer .text-muted {
+  margin: 20px 0;
+  color: #fff;
+}
+
+
+.footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+#sidebar.affix {
+    top: 20px;
+}
+
+/* sidebar */
+
+.bs-docs-sidebar {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* all links */
+
+.bs-docs-sidebar .nav>li>a {
+    color: #999;
+    border-left: 2px solid transparent;
+    padding: 4px 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* nested links */
+
+.bs-docs-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 15px;
+}
+
+/* active & hover links */
+
+.bs-docs-sidebar .nav>.active>a, .bs-docs-sidebar .nav>li>a:hover, .bs-docs-sidebar .nav>li>a:focus {
+    color: #1990CA;
+    text-decoration: none;
+    background-color: transparent;
+    border-left-color: #1990CA;
+}
+
+/* all active links */
+
+.bs-docs-sidebar .nav>.active>a, .bs-docs-sidebar .nav>.active:hover>a, .bs-docs-sidebar .nav>.active:focus>a {
+    font-weight: 700;
+}
+
+/* nested active links */
+
+.bs-docs-sidebar .nav .nav>.active>a, .bs-docs-sidebar .nav .nav>.active:hover>a, .bs-docs-sidebar .nav .nav>.active:focus>a {
+    font-weight: 500;
+}
+
+/* hide inactive nested list */
+
+.bs-docs-sidebar .nav ul.nav {
+    display: none;
+}
+
+/* show active nested list */
+
+.bs-docs-sidebar .nav>.active>ul.nav {
+    display: block;
+}
+.jumbotron-color {
+    background: #1990CA;
+    color: #fff;
+}
+.jumbotron-color p {
+    max-width: 760px;
+    color: #dedeff;
+}
+.navbar-static-top {
+    margin-bottom: 0px;
+}
+.page-heading {
+    padding: 20px 0 40px;
+    text-align: center;
+}
+.divider {
+    border-bottom: 1px solid #ccc;
+}
+#fake-footer {
+    height: 1px;
+    widith: 100%;
+    background: #ccc;
+}
+
+/* Helpers for top position on internal page links
+====================================================*/
+
+#topPos:before, h3:before {
+    display: block;
+    content: " ";
+    margin-top: -80px;
+    height: 80px;
+    visibility: hidden;
+}
+
+/* AFFIX STYLES
+====================================================*/
+
+.panel-affix {
+    min-width: 225px;
+}
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+    font-size: 18px;
+}
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+.bs-callout-default {
+    border-left-color: #777;
+}
+.bs-callout-default h4 {
+    color: #777;
+}
+.bs-callout-primary {
+    border-left-color: #428bca;
+}
+.bs-callout-primary h4 {
+    color: #428bca;
+}
+.bs-callout-success {
+    border-left-color: #5cb85c;
+}
+.bs-callout-success h4 {
+    color: #5cb85c;
+}
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+.bs-callout-danger h4 {
+    color: #d9534f;
+}
+.bs-callout-warning {
+    border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+    color: #f0ad4e;
+}
+.bs-callout-info {
+    border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+    color: #5bc0de;
+}
+@media screen and (max-width: 1000px) {
+    .bs-docs-sidebar {
+        display: none;
+    }
+}
