@@ -6389,6 +6389,168 @@ Once the game determines the `JCHANCE` probability, a random number is generated
 # Appendix G: Street Suit Planner Data <a name="appendix-g"></a>
 [[back to top](#contents)]
 
+<table>
+		<tr>
+			<th>Zone</th>
+			<th>Zone ID</th>
+			<th>SUIT_HOOD_INFO_MIN</th> 
+			<th>SUIT_HOOD_INFO_MAX</th> <!--- Still needs to be investigated. These aren't the actual maximums. -->
+			<th>Minmum # of Buildings</th>
+			<th>Maximum # of Buildings</th>
+			<th>Building Weight</th>
+			<th>Maximum # of Cogs in Battle at Once</th>
+			<th>Bossbot (%)</th>
+			<th>Lawbot (%)</th>
+			<th>Cashbot (%)</th>
+			<th>Sellbot (%)</th>
+			<th>Levels</th>
+	        </tr>
+		<tr>
+			<th colspan="15">Toontown Central</th>
+		</tr>
+		<tr>
+			<th align="center">Silly Street</th>
+			<td align="center">2100</td>
+			<td align="center">5</td>
+			<td align="center">15</td>
+			<td align="center">0</td>
+			<td align="center">5</td>
+			<td align="center">20</td>
+			<td align="center">3</td>
+			<td align="center">25</td>
+			<td align="center">25</td>
+			<td align="center">25</td>
+			<td align="center">25</td>
+			<td align="center">1, 2, 3</td>
+		</tr>
+		<tr>
+			<th align="center">Loopy Lane</th>
+			<td align="center">2200</td>
+			<td align="center">3</td>
+			<td align="center">10</td>
+			<td align="center">0</td>
+			<td align="center">5</td>
+			<td align="center">15</td>
+			<td align="center">3</td>
+			<td align="center">10</td>
+			<td align="center">70</td>
+			<td align="center">10</td>
+			<td align="center">10</td>
+			<td align="center">1, 2, 3</td>
+		</tr>
+		<tr>
+			<th align="center">Punchline Place</th>
+			<td align="center">2300</td>
+			<td align="center">3</td>
+			<td align="center">10</td>
+			<td align="center">0</td>
+			<td align="center">5</td>
+			<td align="center">15</td>
+			<td align="center">3</td>
+			<td align="center">10</td>
+			<td align="center">10</td>
+			<td align="center">40</td>
+			<td align="center">40</td>
+			<td align="center">1, 2, 3</td>
+		</tr>
+		<tr>
+			<th colspan="15">Donald's Dock</th>
+		</tr>
+		<tr>
+			<th align="center">Barnacle Boulevard</th>
+			<td align="center">1100</td>
+			<td align="center">1</td>
+			<td align="center">5</td>
+			<td align="center">0</td>
+			<td align="center">99</td>
+			<td align="center">100</td>
+			<td align="center">4</td>
+			<td align="center">90</td>
+			<td align="center">10</td>
+			<td align="center">0</td>
+			<td align="center">0</td>
+			<td align="center">2, 3, 4</td>
+		</tr>
+		<tr>
+			<th align="center">Seaweed Street</th>
+			<td align="center">1200</td>
+			<td align="center">1</td>
+			<td align="center">5</td>
+			<td align="center">0</td>
+			<td align="center">99</td>
+			<td align="center">100</td>
+			<td align="center">4</td>
+			<td align="center">0</td>
+			<td align="center">0</td>
+			<td align="center">90</td>
+			<td align="center">10</td>
+			<td align="center">3, 4, 5, 6</td>
+		</tr>
+		<tr>
+			<th align="center">Lighthouse Lane</th>
+			<td align="center">1300</td>
+			<td align="center">1</td>
+			<td align="center">5</td>
+			<td align="center">0</td>
+			<td align="center">99</td>
+			<td align="center">100</td>
+			<td align="center">4</td>
+			<td align="center">40</td>
+			<td align="center">40</td>
+			<td align="center">10</td>
+			<td align="center">10</td>
+			<td align="center">3, 4, 5, 6</td>
+		</tr>
+		<tr>
+			<th colspan="15">Daisy Gardens</th>
+		</tr>
+		<tr>
+			<th align="center">Elm Street</th>
+			<td align="center">5100</td>
+			<td align="center">1</td>
+			<td align="center">5</td>
+			<td align="center">0</td>
+			<td align="center">99</td>
+			<td align="center">100</td>
+			<td align="center">4</td>
+			<td align="center">0</td>
+			<td align="center">20</td>
+			<td align="center">10</td>
+			<td align="center">70</td>
+			<td align="center">2, 3, 4</td>
+		</tr>
+		<tr>
+			<th align="center">Maple Street</th>
+			<td align="center">5200</td>
+			<td align="center">1</td>
+			<td align="center">5</td>
+			<td align="center">0</td>
+			<td align="center">99</td>
+			<td align="center">100</td>
+			<td align="center">4</td>
+			<td align="center">10</td>
+			<td align="center">70</td>
+			<td align="center">0</td>
+			<td align="center">20</td>
+			<td align="center">3, 4, 5, 6</td>
+		</tr>
+		<tr>
+			<th align="center">Oak Street</th>
+			<td align="center">5300</td>
+			<td align="center">1</td>
+			<td align="center">5</td>
+			<td align="center">0</td>
+			<td align="center">99</td>
+			<td align="center">100</td>
+			<td align="center">4</td>
+			<td align="center">5</td>
+			<td align="center">5</td>
+			<td align="center">5</td>
+			<td align="center">85</td>
+			<td align="center">3, 4, 5, 6</td>
+		</tr>
+</table>
+
 # Notes <a name="ttr"></a>
 
 -The GlobalRarityDialBase value for fishing was lowered as part of the February 1st, 2015 update. It decreased from 4.3 to between 3.5-3.8.
